@@ -1,4 +1,14 @@
-const Path = (props) => (
+interface PathProps {
+  d: string;
+  className?: string;
+  opacity?: string;
+  variants?: {
+    closed: { d: string };
+    open: { d: string };
+  };
+}
+
+const Path = (props: PathProps) => (
   <path
     fill="transparent"
     strokeWidth="3"

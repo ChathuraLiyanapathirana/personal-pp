@@ -1,11 +1,11 @@
-import { useAnimate, stagger } from "framer-motion";
+import { useAnimate, stagger, Segment } from "framer-motion";
 import { useEffect } from "react";
 
 const useMenuAnimation = (isOpen: boolean) => {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    const menuAnimations = isOpen
+    const menuAnimations: Segment[] = isOpen
       ? [
           [
             "nav",
@@ -46,4 +46,4 @@ const useMenuAnimation = (isOpen: boolean) => {
   return scope;
 };
 
-export default useMenuAnimation
+export default useMenuAnimation;

@@ -15,7 +15,7 @@ import {
   faMailReply,
   faPerson,
 } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 
 const initState = {
   name: "",
@@ -27,11 +27,13 @@ const ContactSection = () => {
   const [formData, setFormData] = useState(initState);
   const [response, setResponse] = useState<string | null>(null);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     if (!formData.name || !formData.email || !formData.message) {
       console.error("Please fill in all required fields");
       return;

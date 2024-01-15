@@ -4,11 +4,26 @@ import React, { useEffect, useState } from "react";
 import BlogPost from "./BlogPost";
 import { contactInfo } from "@/constants/appConstant";
 
-type Props = {};
+interface Post {
+  date: string;
+  excerpt: {
+    rendered: string;
+  };
+  _embedded: {
+    "wp:featuredmedia": {
+      media_details: {
+        file: string;
+      };
+    }[];
+  };
+  title: {
+    rendered: string;
+  };
+}
 
 const BlogSection = () => {
   const [posts, setPosts] = useState([]);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<null | string>(null);
 
   useEffect(() => {
     (async () => {
@@ -23,7 +38,7 @@ const BlogSection = () => {
         const posts = await response.json();
         setPosts(posts);
       } catch (error) {
-        setError(error.message);
+        setError((error as Error).message);
       }
     })();
   }, []);
@@ -47,7 +62,7 @@ const BlogSection = () => {
       </div>
       {posts?.length > 0 ? (
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 md:grid-cols-2 lg:gap-8">
-          {posts.map((item, index) => {
+          {posts.map((item: Post, index) => {
             return (
               <BlogPost
                 date={item?.date}
