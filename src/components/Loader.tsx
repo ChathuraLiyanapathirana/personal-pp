@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const Loader = (props: Props) => {
+const Loader = () => {
   return (
     <div className="md:container md:mx-auto min-h-screen bg-white pt-4 lg:pr-0 lg:pl-0 xxs:pr-4 xxs:pl-4">
       <div className="flex flex-1 flex-col lg:items-start xs:items-end xs:justify-end">

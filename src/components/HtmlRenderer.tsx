@@ -1,10 +1,7 @@
 import React from "react";
+import { HtmlRendererType } from "@/types/appTypes";
 
-interface Props {
-  htmlString: string;
-}
-
-const HtmlRenderer: React.FC<Props> = ({ htmlString }) => {
+const HtmlRenderer: React.FC<HtmlRendererType> = ({ htmlString }) => {
   return (
     <div
       className="html-renderer"

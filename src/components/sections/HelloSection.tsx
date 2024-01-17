@@ -1,12 +1,7 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import ProfileImage from "../ProfileImage";
 
-type Props = {};
-
-const HelloSection = (props: Props) => {
+const HelloSection = () => {
   return (
     <div
       className="md:container md:mx-auto min-h-screen bg-white flex justify-center items-center"
@@ -15,15 +10,7 @@ const HelloSection = (props: Props) => {
       <section className="text-white">
         <div className="mx-auto max-w-screen-xl px-4 lg:py-16 xs:pt-8 xs:pb-16 lg:flex lg:h-screen lg:items-center">
           <div className="mx-auto max-w-3xl flex justify-center items-center flex-col text-center">
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.1 }}>
-              <Image
-                src="/images/iam.png"
-                width={320}
-                height={200}
-                className="my-image"
-                alt=""
-              />
-            </motion.div>
+            <ProfileImage />
             <h1 className="md:text-7xl font-extrabold xs:text-5xl text-slate-900 mt-6">
               <span className="text-lime-300">I'm Chathura.</span>
               <span className="md:text-5xl font-extrabold xs:text-4xl sm:block mt-2">

@@ -1,11 +1,9 @@
-import { expertise } from "@/constants/appConstant";
 import React from "react";
-import Expertise from "./Expertise";
-import DownloadButton from "./ResumeDownloadButton";
+import { contactInfo, expertise } from "@/constants/appConstant";
+import Expertise from "../Expertise";
+import DownloadButton from "../ResumeDownloadButton";
 
-type Props = {};
-
-const AboutSection = (props: Props) => {
+const AboutSection = () => {
   return (
     <div
       className="md:container md:mx-auto min-h-screen xxs:pt-8 xxs:pb-8 bg-white flex flex-col justify-center items-center"
@@ -18,22 +16,22 @@ const AboutSection = (props: Props) => {
           </h1>
           <div className="" />
           <p className="mt-8 mb-0">
-            Surname : <strong>Liyana Pathiranage</strong>
+            Surname : <strong>{contactInfo.surName}</strong>
           </p>
           <p className="mt-4 mb-0">
-            Name : <strong>Chathura Buddhika</strong>
+            Name : <strong>{contactInfo.name}</strong>
           </p>
           <p className="mt-4 mb-0">
-            Birth Day : <strong>1993 February 07</strong>
+            Birth Day : <strong>{contactInfo.bDay}</strong>
           </p>
           <p className="mt-4 mb-0">
-            Nationality : <strong>Sri Lankan</strong>
+            Nationality : <strong>{contactInfo.nationality}</strong>
           </p>
           <p className="mt-4 mb-0">
-            Languages : <strong>English and Sinhala</strong>
+            Languages : <strong>{contactInfo.languages}</strong>
           </p>
           <p className="mt-4 mb-0">
-            Freelance : <strong>Available</strong>
+            Freelance : <strong>{contactInfo.freelance}</strong>
           </p>
           <DownloadButton />
         </div>

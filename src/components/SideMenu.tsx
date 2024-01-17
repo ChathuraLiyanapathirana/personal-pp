@@ -1,8 +1,6 @@
-type SideMenuProps = {
-  onClickItem: () => void;
-};
+import { SideMenuType } from "@/types/appTypes";
 
-const SideMenu = ({ onClickItem }: SideMenuProps) => {
+const SideMenu = ({ onClickItem }: SideMenuType) => {
   return (
     <nav className="menu">
       <ul>

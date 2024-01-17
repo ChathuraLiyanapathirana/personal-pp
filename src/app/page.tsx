@@ -1,10 +1,10 @@
 "use client";
 
-import AboutSection from "@/components/AboutSection";
-import BlogSection from "@/components/BlogSection";
-import ContactSection from "@/components/ContactSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import HelloSection from "@/components/HelloSection";
+import AboutSection from "@/components/sections/AboutSection";
+import BlogSection from "@/components/sections/BlogSection";
+import ContactSection from "@/components/sections/ContactSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import HelloSection from "@/components/sections/HelloSection";
 import { MenuToggle } from "@/components/MenuToggle";
 import SideMenu from "@/components/SideMenu";
 import useMenuAnimation from "@/hooks/useMenuAnimation";

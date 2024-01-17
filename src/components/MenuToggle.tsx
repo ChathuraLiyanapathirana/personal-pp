@@ -1,14 +1,6 @@
-interface PathProps {
-  d: string;
-  className?: string;
-  opacity?: string;
-  variants?: {
-    closed: { d: string };
-    open: { d: string };
-  };
-}
+import { AnimatedPathType } from "@/types/appTypes";
 
-const Path = (props: PathProps) => (
+const Path = (props: AnimatedPathType) => (
   <path
     fill="transparent"
     strokeWidth="3"

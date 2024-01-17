@@ -1,11 +1,7 @@
 import React from "react";
+import { ExpertiseType } from "@/types/appTypes";
 
-type Props = {
-  value: string;
-  large: boolean;
-};
-
-const Expertise = ({ value, large }: Props) => {
+const Expertise = ({ value, large }: ExpertiseType) => {
   const dynamicClassName = `font-extrabold text-center text-${
     large ? "lg" : "sm"
   }`;

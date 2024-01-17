@@ -1,16 +1,10 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import HtmlRenderer from "./HtmlRenderer";
 import { contactInfo } from "@/constants/appConstant";
+import { BlogPostType } from "@/types/appTypes";
 
-type Props = {
-  title: string;
-  date: string;
-  image: string;
-  description: string;
-};
-
-const BlogPost = ({ title, date, description, image }: Props) => {
+const BlogPost = ({ title, date, description, image }: BlogPostType) => {
   const formatedDate = new Date(date).toString().slice(0, 14);
 
   return (
