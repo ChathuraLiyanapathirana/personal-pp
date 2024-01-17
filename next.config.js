@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['appcitor.com'],
+    remotePatterns: [
+      {
+        protocol: 'https', // Required: Specify the protocol (http or https)
+        hostname: 'appcitor.com', // Required: Specify the allowed hostname
+      },
+    ]
   },
   env: {
     WP_URL: process.env.WP_URL,
