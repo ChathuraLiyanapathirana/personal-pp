@@ -4,7 +4,7 @@ import { saveAs } from "file-saver";
 const DownloadButton = () => {
   const downloadCV = async () => {
     try {
-      const response = await fetch("/pdf/lpcb_cv.pdf");
+      const response = await fetch("/pdf/lpcb_resume.pdf");
       const blob = await response.blob();
 
       saveAs(blob, "lpcb_cv.pdf");
