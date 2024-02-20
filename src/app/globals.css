@@ -22,6 +22,9 @@ body {
   margin: 0;
   padding: 0;
   /* overflow: hidden; */
+}
+
+.portfolio-body {
   min-height: 100vh;
 }
 
@@ -135,7 +138,7 @@ li {
   border-radius: 99px;
 }
 
-.html-renderer p{
+.html-renderer p {
   font-size: 14px;
 }
 
