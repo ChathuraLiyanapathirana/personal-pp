@@ -29,10 +29,10 @@ export const contactInfo = {
 export const experienceSummary: ExperienceType[] = [
     {
         company: 'Rhino Partners (Pvt) Ltd',
-        domain: 'Insurance',
+        domain: 'Insurance and payment sdk development',
         designation: 'Senior Software Engineer',
         duration: 'Present',
-        product: 'Singlife (Singapore & Philippine)',
+        product: 'Singlife (Singapore & Philippine) , Komoju RN SDK',
         description: `<strong>Responsibilities:</strong>
         In the dynamic realm of React Native application development, a
         comprehensive approach to Research and Development is paramount for

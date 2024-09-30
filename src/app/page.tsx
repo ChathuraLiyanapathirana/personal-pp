@@ -13,6 +13,7 @@ import { Suspense, useState } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Loader from "@/components/Loader";
+import ProjectSection from "@/components/sections/ProjectSection";
 config.autoAddCss = false;
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <HelloSection />
       <AboutSection />
       <ExperienceSection />
+      <ProjectSection />
       <Suspense fallback={<Loader />}>
         <BlogSection />
       </Suspense>

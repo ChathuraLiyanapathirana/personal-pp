@@ -20,6 +20,11 @@ const SideMenu = ({ onClickItem }: SideMenuType) => {
           </a>
         </li>
         <li>
+          <a href="#project" onClick={onClickItem}>
+            Projects
+          </a>
+        </li>
+        <li>
           <a href="#blog" onClick={onClickItem}>
             Blog
           </a>
