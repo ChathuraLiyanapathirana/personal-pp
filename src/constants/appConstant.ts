@@ -11,7 +11,7 @@ export const expertise = ['Ts', 'Js', 'React\nNative', 'React', 'Next', 'Jest', 
 export const contactInfo = {
     name: 'Chathura Buddhika',
     surName: 'Liyana Pathiranage',
-    bDay: '1993 February 07',
+    bDay: 'February 07',
     nationality: 'Sri Lankan',
     languages: 'English and Sinhala',
     freelance: 'Available',

@@ -6,7 +6,7 @@ import ProjectCard from "../ProjectCard";
 const ProjectSection = () => {
   return (
     <div
-      className="md:container md:mx-auto min-h-screen bg-white pt-4 lg:pr-4 lg:pl-4 xxs:pr-4 xxs:pl-4"
+      className="md:container md:mx-auto min-h-screen bg-white pt-4 mb-8 md:mb-2 lg:pr-4 lg:pl-4 xxs:pr-4 xxs:pl-4"
       id="project"
     >
       <div className="flex flex-1 flex-col lg:items-start xs:items-end xs:justify-end">

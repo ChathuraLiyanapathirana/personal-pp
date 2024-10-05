@@ -84,7 +84,7 @@ p {
   padding-top: 100px;
   transform: translateX(-100%);
   will-change: transform;
-  z-index: 9;
+  z-index: 999;
 }
 
 ul {

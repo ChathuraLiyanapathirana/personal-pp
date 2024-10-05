@@ -52,11 +52,11 @@ const ProjectCard = ({
                     <dl className="mt-6 flex gap-4 sm:gap-6">
                         <div className="flex flex-col-reverse">
                             <dt className="text-sm font-medium text-gray-600 flex">
-                                <a href={link} className='text-lime-600'>
+                                <a href={link} target='_blank' className='text-lime-600'>
                                     {linkLabel}
                                 </a>
                                 {
-                                    link2 && <a href={link2} className='text-orange-600'>
+                                    link2 && <a href={link2} target='_blank' className='text-orange-600'>
                                         , {linkLabel2}
                                     </a>
                                 }

@@ -20,7 +20,7 @@ const HelloSection = () => {
                 </div>
                 <span className="md:text-5xl font-extrabold xs:text-4xl sm:block mt-3">
                   {" "}
-                  Welcome to my portfolio
+                  Explore my portfolio and discover my work.
                 </span>
               </h1>
 
