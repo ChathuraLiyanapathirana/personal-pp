@@ -29,7 +29,7 @@ const WPBlogContent = () => {
   return (
     <div>
       {posts?.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 md:grid-cols-2 lg:gap-8">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 md:grid-cols-2 lg:gap-8">
           {posts.map((item: PostType, index) => {
             return (
               <BlogPost
