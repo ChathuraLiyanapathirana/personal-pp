@@ -59,7 +59,7 @@ const ProjectSection = () => {
             title="Patpat Mobile"
             by="patpat"
             description="Sri Lanka's leading classified platform for iOS and Android."
-            job="React native SDK development"
+            job="React native application development"
             toColor="to-purple-600"
           />
         </div>
