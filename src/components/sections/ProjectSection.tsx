@@ -55,6 +55,13 @@ const ProjectSection = () => {
             linkLabel="Website"
             toColor="to-sky-600"
           />
+          <ProjectCard
+            title="Patpat Mobile"
+            by="patpat"
+            description="Sri Lanka's leading classified platform for iOS and Android."
+            job="React native SDK development"
+            toColor="to-purple-600"
+          />
         </div>
         <h2 className="text-2xl font-extrabold sm:text-2xl text-slate-900 mt-6 mb-0">
           Personal Contributions
