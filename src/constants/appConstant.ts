@@ -28,10 +28,31 @@ export const contactInfo = {
 
 export const experienceSummary: ExperienceType[] = [
     {
+        company: 'Freelance Software Development Consulting',
+        domain: 'Software Development Consulting',
+        designation: 'Software Development Consultant',
+        duration: 'Present',
+        product: 'Contract-based freelance projects',
+        description: `<strong>Responsibilities:</strong>
+        Providing comprehensive software development consulting services on a contract basis. 
+        Specializing in full-stack development, mobile application development, and technical 
+        consultation for various clients. Delivering custom solutions across different domains 
+        including web applications, mobile apps, and system integrations. Working with diverse 
+        technologies and frameworks to meet client requirements and project specifications.
+        <br></br>
+        <strong>Programming Best Practices:</strong> SOLID principles / Design patterns / 
+        OOP on TypeScript / Clean Architecture<br></br>
+        <strong>Agile Development:</strong> Flexible engagement models, client collaboration, 
+        iterative development processes.<br></br>
+        <strong>Tools and Technologies:</strong> React, React Native, Next.js, TypeScript, 
+        Node.js, Express, MongoDB, PostgreSQL, AWS services, Git version control, and 
+        various deployment platforms. Adaptable to client technology stack requirements.`
+    },
+    {
         company: 'Rhino Partners (Pvt) Ltd',
         domain: 'Insurance and payment sdk development',
         designation: 'Senior Software Engineer',
-        duration: 'Present',
+        duration: 'Sep, 2024',
         product: 'Singlife (Singapore & Philippine) , Komoju RN SDK',
         description: `<strong>Responsibilities:</strong>
         In the dynamic realm of React Native application development, a
