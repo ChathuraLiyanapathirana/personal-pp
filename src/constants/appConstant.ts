@@ -17,7 +17,7 @@ export const contactInfo = {
     freelance: 'Available',
     mobile: '+94 789307370',
     address: 'Kalutara,\nWestern Province,\nSri Lanka',
-    email: 'cbuddhika3@gmail.com',
+    email: 'lpchathurabuddhika@gmail.com',
     whatsapp: 'https://wa.me/94789307370',
     linkedin: 'https://www.linkedin.com/in/cblp/',
     facebook: 'https://www.facebook.com/chathurabuddhikalp/',

@@ -26,7 +26,7 @@ const HelloSection = () => {
 
               <p className="mx-auto xs:mt-0 sm:mt-4 max-w-xl sm:text-xl/relaxed text-slate-500">
                 Passionate about crafting innovative software solutions that drive
-                efficiency and elevate user experiences. With over 5 years of
+                efficiency and elevate user experiences. With over 7 years of
                 hands-on experience in the software development industry, I bring
                 a wealth of expertise to deliver cutting-edge solutions that
                 seamlessly blend technology and user needs.
