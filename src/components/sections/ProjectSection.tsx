@@ -61,6 +61,10 @@ const ProjectSection = () => {
             description="Sri Lanka's leading classified platform for iOS and Android."
             job="React native application development"
             toColor="to-purple-600"
+            link="https://play.google.com/store/apps/details?id=com.fg.patpat&hl=en"
+            linkLabel="Google Play"
+            link2="https://apps.apple.com/mk/app/patpat-lk/id1385368825"
+            linkLabel2="App Store"
           />
         </div>
         <h2 className="text-2xl font-extrabold sm:text-2xl text-slate-900 mt-6 mb-0">
