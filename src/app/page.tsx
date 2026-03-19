@@ -25,7 +25,7 @@ export default function Home() {
       <SideMenu onClickItem={() => setIsOpen(!isOpen)} />
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <HelloSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <ExperienceSection />
       <ProjectSection />
       <Suspense fallback={<Loader />}>

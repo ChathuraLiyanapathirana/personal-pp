@@ -5,17 +5,17 @@ import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collis
 const HelloSection = () => {
   return (
     <div
-      className="md:container md:mx-auto min-h-screen bg-white flex justify-center items-center"
+      className="md:container md:mx-auto min-h-screen bg-white dark:bg-neutral-900 flex justify-center items-center"
       id="hello"
     >
-      <BackgroundBeamsWithCollision className="md:absolute !h-auto mb-8 md:mb-0">
+      {/* <BackgroundBeamsWithCollision className="md:absolute !h-auto mb-8 md:mb-0"> */}
         <section className="text-white">
           <div className="mx-auto max-w-screen-xl px-4 lg:py-16 xs:pt-8 xs:pb-16 lg:flex lg:h-screen lg:items-center">
             <div className="mx-auto max-w-3xl flex justify-center items-center flex-col text-center">
               <ProfileImage />
-              <h1 className="md:text-7xl font-extrabold xs:text-5xl text-slate-900 mt-6">
+              <h1 className="md:text-7xl font-extrabold xs:text-5xl text-slate-900 dark:text-white mt-6">
                 <div>
-                <span className="text-slate-900">Hello, I'm </span>
+                <span className="text-slate-900 dark:text-white">Hello, I'm </span>
                 <span className="text-lime-300">Chathura.</span>
                 </div>
                 <span className="md:text-5xl font-extrabold xs:text-4xl sm:block mt-3">
@@ -24,17 +24,17 @@ const HelloSection = () => {
                 </span>
               </h1>
 
-              <p className="mx-auto xs:mt-0 sm:mt-4 max-w-xl sm:text-xl/relaxed text-slate-500">
+              <p className="mx-auto xs:mt-0 sm:mt-4 max-w-2xl sm:text-xl/relaxed text-slate-500 dark:text-slate-400">
                 Passionate about crafting innovative software solutions that drive
-                efficiency and elevate user experiences. With over 7 years of
-                hands-on experience in the software development industry, I bring
+                efficiency and elevate user experiences. With over 8 years of
+                hands on experience in the software development industry, I bring
                 a wealth of expertise to deliver cutting-edge solutions that
                 seamlessly blend technology and user needs.
               </p>
             </div>
           </div>
         </section>
-      </BackgroundBeamsWithCollision>
+      {/* </BackgroundBeamsWithCollision> */}
     </div>
   );
 };

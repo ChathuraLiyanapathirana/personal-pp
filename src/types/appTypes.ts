@@ -33,7 +33,7 @@ export type BlogPostType = {
 
 export type ExpertiseType = {
     value: string;
-    large: boolean;
+    large?: boolean;
 };
 
 export type HtmlRendererType = {
@@ -52,5 +52,17 @@ export type AnimatedPathType = {
 
 export type SideMenuType = {
     onClickItem: () => void;
-  };
-  
+};
+
+export type ProjectType = {
+    title: string;
+    by: string;
+    description: string;
+    job?: string;
+    link: string;
+    linkLabel: string;
+    link2?: string;
+    linkLabel2?: string;
+    toColor: string;
+};
+

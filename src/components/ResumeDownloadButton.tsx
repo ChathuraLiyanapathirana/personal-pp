@@ -15,7 +15,7 @@ const DownloadButton = () => {
 
   return (
     <h1
-      className="px-0 py-4 md:mt-28 xxs:mt-8 bg-slate-900 text-white rounded-lg text-sm cursor-pointer active:scale-[.97]"
+      className="px-0 py-4 md:mt-28 xxs:mt-8 bg-slate-900 text-white dark:text-white dark:bg-gray-600 rounded-lg text-sm cursor-pointer active:scale-[.97]"
       onClick={downloadCV}
     >
       Download Resume

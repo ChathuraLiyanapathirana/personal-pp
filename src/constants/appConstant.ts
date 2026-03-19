@@ -1,4 +1,4 @@
-import { ExperienceType } from "@/types/appTypes";
+import { ExperienceType, ProjectType } from "@/types/appTypes";
 
 const routes = [
     { label: 'Home', href: "/" },
@@ -157,4 +157,97 @@ export const experienceSummary: ExperienceType[] = [
         development process, ensuring the delivery of high-quality and seamlessly 
         integrated solutions in a collaborative and dynamic software development environment.`
     }
-]
+];
+
+export const professionalProjects: ProjectType[] = [
+    {
+        title: "Komoju",
+        by: "Delica",
+        description: "Japan based payment gateway offering seamless integration for online merchants.",
+        job: "React native SDK development",
+        link: "https://www.npmjs.com/package/@komoju/komoju-react-native",
+        linkLabel: "Npm repo",
+        toColor: "to-lime-600",
+    },
+    {
+        title: "Singlife",
+        by: "Singlife ph & Singlife singapore",
+        description: "Singapore-based financial company offering a wide range of products and services.",
+        job: "Both IOS and Android application developments",
+        link: "https://singlife.com/en",
+        linkLabel: "Singlife Sg",
+        link2: "https://singlife.com.ph/",
+        linkLabel2: "Singlife Ph",
+        toColor: "to-red-500",
+    },
+    {
+        title: "Lucky1",
+        by: "DigitalX",
+        description: "Online lottery platform based in Sri Lanka.",
+        job: "Full Stack development and Widgets development",
+        link: "https://lucky1.lk/",
+        linkLabel: "Website",
+        toColor: "to-blue-600",
+    },
+    {
+        title: "SriPay",
+        by: "Boswin pvt Ltd",
+        description: "Payment gateway based in Sri Lanka, integrated with Alipay.",
+        job: "Full Stack development and mobile application development using Ionic3",
+        link: "https://sripay.lk/",
+        linkLabel: "Website",
+        toColor: "to-sky-600",
+    },
+    {
+        title: "Patpat Mobile",
+        by: "patpat",
+        description: "Sri Lanka's leading classified platform for iOS and Android.",
+        job: "React native application development",
+        toColor: "to-purple-600",
+        link: "https://play.google.com/store/apps/details?id=com.fg.patpat&hl=en",
+        linkLabel: "Google Play",
+        link2: "https://apps.apple.com/mk/app/patpat-lk/id1385368825",
+        linkLabel2: "App Store",
+    },
+    {
+        title: "HelaYes",
+        by: "bizgrow",
+        description: "Sri Lanka travel and tourism companion that creates itineraries and helps you plan your trip.",
+        job: "React native application development",
+        toColor: "to-green-600",
+        link: "https://play.google.com/store/apps/details?id=com.helayes.app",
+        linkLabel: "Google Play",
+        link2: "https://apps.apple.com/us/app/helayes/id6752722818",
+        linkLabel2: "App Store",
+    },
+    {
+        title: "Coming App",
+        by: "Coming App",
+        description: "A travel and adventure style community app for instant connections, create a profile, match with like-minded explorers, and discover spontaneous plans and experiences.",
+        job: "React native version upgrade (16kb migration)",
+        toColor: "to-red-600",
+        link: "https://play.google.com/store/apps/details?id=com.imcomingapp.mobile",
+        linkLabel: "Google Play",
+        link2: "https://apps.apple.com/us/app/coming-app-find-activity-pals/id6445868774",
+        linkLabel2: "App Store",
+    },
+];
+
+export const personalProjects: ProjectType[] = [
+    {
+        title: "Stitchnp",
+        by: "lpcb",
+        description: "Helps consolidate multiple package commands into a single command.",
+        link: "https://stitchnp.vercel.app/",
+        linkLabel: "Tool",
+        toColor: "to-yellow-600",
+    },
+    {
+        title: "Github",
+        by: "lpcb",
+        description: "There are several projects available for free use.",
+        link: "https://github.com/ChathuraLiyanapathirana",
+        linkLabel: "Github",
+        toColor: "to-gray-300",
+    },
+];

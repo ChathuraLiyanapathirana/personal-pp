@@ -9,11 +9,11 @@ const SideMenu = ({ onClickItem }: SideMenuType) => {
             Home
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="#about" onClick={onClickItem}>
             About
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="#experience" onClick={onClickItem}>
             Experience

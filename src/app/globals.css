@@ -24,6 +24,7 @@ body {
   /* overflow: hidden; */
 }
 
+
 .portfolio-body {
   min-height: 100vh;
 }
@@ -35,6 +36,14 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+html.dark {
+  background-color: #171717;
+}
+
+html:not(.dark) {
+  background-color: #ffffff;
 }
 
 .nav div {
@@ -130,6 +139,42 @@ li {
 
 .float-button path {
   fill: var(--background);
+}
+
+.dark .float-button {
+  background: var(--white);
+}
+
+.dark .float-button path {
+  stroke: var(--black);
+}
+
+.theme-toggle-button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: fixed;
+  top: 18px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--background);
+  padding: 10px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dark .theme-toggle-button {
+  background: var(--white);
+  color: var(--black);
 }
 
 .my-image {

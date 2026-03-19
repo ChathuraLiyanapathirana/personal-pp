@@ -5,7 +5,7 @@ import ContactDetails from "../ContactDetails";
 const ContactSection = () => {
   return (
     <div
-      className="md:container md:mx-auto h-screen bg-white flex flex-1 sm:flex-row flex-col items-start xs:mt-8 lg:pr-0 lg:pl-0 xxs:pr-4 xxs:pl-4"
+      className="md:container md:mx-auto h-screen bg-white dark:bg-neutral-900 flex flex-1 sm:flex-row flex-col items-start gap-6 xs:mt-8 lg:pr-0 lg:pl-0 xxs:pr-4 xxs:pl-4"
       id="contact"
     >
       {/* Contact Details */}
