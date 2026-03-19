@@ -23,7 +23,7 @@ type Props = {
     linkLabel2?: string;
     toColor: string
 }
-
+// redeployment comment
 const ProjectCard = ({
     title, by, description, link, linkLabel, link2, linkLabel2, job, toColor
 }: Props) => {
