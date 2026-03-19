@@ -29,7 +29,7 @@ const ProjectCard = ({
 }: Props) => {
     return (
         <div
-            className="block border-2 border-black dark:border-white bg-gray-300 dark:bg-gray-600 p-4 hover:bg-yellow-100 dark:hover:bg-gray-500 focus-within:ring-2 focus-within:ring-gray-300 dark:focus-within:ring-white focus-within:outline-0 sm:p-6 w-full min-w-0 max-h-80"
+            className="block border-2 border-black dark:border-white bg-gray-300 dark:bg-gray-600 p-4 hover:bg-lime-100 dark:hover:bg-gray-500 focus-within:ring-2 focus-within:ring-gray-300 dark:focus-within:ring-white focus-within:outline-0 sm:p-6 w-full min-w-0 max-h-80"
             style={{ boxShadow: `4px 4px 0 0 ${toColorToHex[toColor] ?? "#000"}` }}
         >
             <div>
