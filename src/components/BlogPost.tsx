@@ -36,7 +36,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               translateZ="70"
               className="text-xl dark:text-white"
             >
-              <time dateTime={formatedDate} className="block text-xs text-gray-500 ms-2">
+              <time dateTime={formatedDate} className="block text-xs text-gray-500 dark:text-gray-300 ms-2">
                 {" "}
                 {formatedDate}{" "}
               </time>
@@ -45,7 +45,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               translateZ="80"
               className="text-xl font-bold text-neutral-600 dark:text-white"
             >
-              <h3 className="mt-0.5 text-lg text-gray-900 ms-2">
+              <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white ms-2">
                 <HtmlRenderer htmlString={title} />
               </h3>
             </CardItem>
@@ -53,7 +53,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               translateZ="70"
               className="text-xl dark:text-white"
             >
-              <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 ms-2">
+              <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-200 ms-2">
                 <HtmlRenderer htmlString={description} />
               </div>
             </CardItem>
@@ -64,12 +64,12 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               <a
                 href={contactInfo.blog}
                 target="_blank"
-                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-gray-800 ms-2"
+                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-gray-800 dark:text-white ms-2"
               >
                 Find out more
                 <span
                   aria-hidden="true"
-                  className="block transition-all group-hover:ms-0.5 rtl:rotate-180 text-gray-800"
+                  className="block transition-all group-hover:ms-0.5 rtl:rotate-180 text-gray-800 dark:text-white"
                 >
                   &rarr;
                 </span>
