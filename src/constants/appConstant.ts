@@ -28,6 +28,7 @@ export const contactInfo = {
 
 export const experienceSummary: ExperienceType[] = [
     {
+        nested: true,
         company: 'Freelance Software Development Consulting',
         domain: 'Software Development Consulting',
         designation: 'Software Development Consultant',
@@ -46,7 +47,73 @@ export const experienceSummary: ExperienceType[] = [
         iterative development processes.<br></br>
         <strong>Tools and Technologies:</strong> React, React Native, Next.js, TypeScript, 
         Node.js, Express, MongoDB, PostgreSQL, AWS services, Git version control, and 
-        various deployment platforms. Adaptable to client technology stack requirements.`
+        various deployment platforms. Adaptable to client technology stack requirements.`,
+        nestedItems: [
+            {
+                company: 'HelaYes',
+                domain: 'Travel & Tourism',
+                designation: 'Senior Software Engineer/Lead (React Native)',
+                duration: '2025 - Present',
+                product: 'iOS & Android consumer application',
+                description: `
+                <strong>Scope:</strong> Developed and maintained a cross platform travel companion app focused on helping global travelers plan and navigate trips efficiently.<br></br>
+                
+                <strong>Highlights:</strong> Implemented geo tracking and Google APIs for location based features; built remote and local notification systems; integrated Firebase services, analytics (Google Analytics, Clarity), and Sentry for monitoring and debugging; optimized performance across iOS and Android; developed native modules where required; managed CI/CD using Bitrise and handled App Store & Play Store publishing.<br></br>
+                
+                <strong>Stack:</strong> React Native, TypeScript, Redux, Redux Toolkit, Google APIs, Geo Tracking, Firebase, Push Notifications (Remote & Local), Sentry, Google Analytics, Clarity, Native Modules (iOS & Android), Bitrise CI/CD, Performance Optimization.
+                `
+            },
+            {
+                company: 'PocketCFO',
+                domain: 'AI driven Accounting Software',
+                designation: 'Senior Software Engineer (React Native)',
+                duration: '2025 - Present',
+                product: 'iOS & Android consumer application',
+                description: `
+                <strong>Scope:</strong> Leading mobile development using Expo, focusing on codebase restructuring, maintainability, and scalable feature delivery.<br></br>
+                
+                <strong>Highlights:</strong> Improved code quality and architecture for long-term maintainability; implemented notification systems; managed CI/CD using EAS; handled App Store and Play Store publishing; contributed to performance tuning and ongoing feature enhancements.<br></br>
+                
+                <strong>Stack:</strong> React Native (Expo), TypeScript, Context API, EAS (CI/CD), Push Notifications, Mobile Architecture, Performance Optimization.
+                `
+            },
+            {
+                company: 'patpat.lk',
+                domain: 'Classified Platform',
+                designation: 'Senior Software Engineer/Lead (React Native)',
+                duration: '2024 - Present',
+                product: 'patpat.lk iOS and Android application development',
+                description: `
+                <strong>Scope:</strong> Led end to end mobile development, defining architecture and delivering a scalable, high performance application from UI/UX designs.<br></br>
+                
+                <strong>Highlights:</strong> Built reusable component architecture; implemented real-time messaging and notifications; integrated Firebase services; enhanced security (SSL pinning, integrity checks, anti-tampering); optimized performance across iOS/Android; managed App Store & Play Store releases including complex signing issues; developed YOLO based number plate recognition for Sri Lankan formats.<br></br>
+                
+                <strong>Stack:</strong> React Native, TypeScript, Redux, Redux Saga, Firebase, Mobile Architecture, Performance Optimization, Mobile Security, Native Modules, Python (YOLO).
+                `
+            },
+            {
+                company: 'Coming App',
+                domain: 'Dating & Social Networking Platform',
+                designation: 'Senior Software Engineer (React Native)',
+                duration: '2025 - 2026',
+                product: 'iOS and Android application development',
+                description: `
+                <strong>Scope:</strong> Developed and maintained a dating and social networking application focused on enabling meaningful user connections. Led a major React Native upgrade to support the 16KB page size requirement while ensuring app stability and compliance with store policies.<br></br>
+                
+                <strong>Highlights:</strong> Successfully completed the core upgrade within 3-4 weeks, followed by extensive debugging to resolve runtime crashes and improve performance. Managed and upgraded 60–70 third-party libraries, ensuring compatibility and optimization. Independently handled the full development lifecycle, including environment setup, configuration, policy compliance updates, and publishing to both Apple App Store and Google Play Store.<br></br>
+                
+                <strong>Stack:</strong> React Native, TypeScript, Redux, Redux Saga, Native Modules (iOS & Android), Version Upgrades, Play Store & App Store Publishing, 16KB Page Size Optimization.
+                `
+            },
+            {
+                company: 'Uniconnect.ai',
+                domain: 'Call center system',
+                designation: 'Software Engineer (Associate Lead Full Stack)',
+                duration: '2024 - 2025',
+                product: 'Uniconnect Call center system',
+                description: `<strong>Scope:</strong> Worked as a full-stack engineer leading the development team, building and maintaining backend REST APIs, a frontend web portal, and an intermediate service layer to handle 3CX integrations and database operations.<br></br> <strong>Highlights:</strong> Mentored junior developers and led system design decisions, designed and developed microservices using Moleculer.js, implemented real-time communication features with WebSockets, and ensured scalable architecture with efficient caching and background job handling.<br></br> <strong>Stack:</strong> React, Moleculer.js, Express.js, WebSockets, SCSS, PostgreSQL, Redis, Bull.`
+            },
+        ],
     },
     {
         company: 'Rhino Partners (Pvt) Ltd',
@@ -124,7 +191,7 @@ export const experienceSummary: ExperienceType[] = [
         Additionally, Swagger Documentation and PostMan were crucial tools for API 
         development and testing. Operating within an experienced Linux base system, 
         I implemented Process Managers like PM2 for efficient process handling, 
-        contributing to a high-performance development environment.`
+        contributing to a high performance development environment.`
     },
     {
         company: 'Boswin Consultancies (Pvt) Ltd',
@@ -153,7 +220,7 @@ export const experienceSummary: ExperienceType[] = [
         powerful APIs that seamlessly integrated with the frontend components. 
         Proficient in MySQL, I adeptly designed and implemented stored procedures 
         and queries, optimizing database interactions for enhanced performance. 
-        This multifaceted experience allowed me to contribute to the end-to-end 
+        This multifaceted experience allowed me to contribute to the end to end 
         development process, ensuring the delivery of high-quality and seamlessly 
         integrated solutions in a collaborative and dynamic software development environment.`
     }

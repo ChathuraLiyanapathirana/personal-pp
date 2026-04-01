@@ -17,6 +17,8 @@ const ExperienceSection = () => {
             domain={item.domain}
             duration={item.duration}
             product={item.product}
+            nested={item.nested}
+            nestedItems={item.nestedItems}
             key={index}
           />
         ))}

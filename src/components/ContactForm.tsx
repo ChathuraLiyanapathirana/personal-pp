@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 
 const initState = {
@@ -8,9 +9,21 @@ const initState = {
   message: "",
 };
 
+const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+declare global {
+  interface Window {
+    grecaptcha?: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 const ContactForm = () => {
   const [formData, setFormData] = useState(initState);
   const [response, setResponse] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -18,40 +31,82 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    if (!formData.name || !formData.email || !formData.message) {
-      console.error("Please fill in all required fields");
-      return;
+  const getRecaptchaToken = async () => {
+    if (!recaptchaSiteKey || !window.grecaptcha) {
+      throw new Error("reCAPTCHA is unavailable");
     }
+
+    return new Promise<string>((resolve, reject) => {
+      window.grecaptcha?.ready(async () => {
+        try {
+          const token = await window.grecaptcha?.execute(recaptchaSiteKey, {
+            action: "contact_form",
+          });
+
+          if (!token) {
+            reject(new Error("Failed to create reCAPTCHA token"));
+            return;
+          }
+
+          resolve(token);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    });
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!formData.name || !formData.email || !formData.message) {
+      setResponse("Please fill in all required fields");
+      return;
+    }
+
     try {
+      setIsSubmitting(true);
+      setResponse(null);
+      const captchaToken = await getRecaptchaToken();
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          captchaToken,
+        }),
       });
 
       const data = await response.json();
 
-      if (data?.success) {
+      if (response.ok && data?.success) {
         setResponse("Email sent successfully");
+        setFormData(initState);
       } else {
-        setResponse("Failed to send email");
+        setResponse(data?.message ?? "Failed to send email");
       }
-    } catch (error) {
+    } catch {
       setResponse("Failed to send email");
+    } finally {
+      setIsSubmitting(false);
     }
+
     setTimeout(() => {
-      setResponse("");
+      setResponse(null);
     }, 2000);
-    setFormData(initState);
   };
 
   return (
     <div className="flex flex-col flex-1 justify-center items-start w-full h-screen md:p-8 xs:pt-4 xxs:pb-8">
+      {recaptchaSiteKey ? (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`}
+          strategy="afterInteractive"
+        />
+      ) : null}
       <h1 className="text-3xl lg:text-4xl font-semibold mt-0 xs:mb-4 text-slate-900 dark:text-white">Send me an Email</h1>
       <form onSubmit={handleSubmit} className="w-full">
         <div className="mb-4">
@@ -97,13 +152,14 @@ const ContactForm = () => {
           </label>
         </div>
         <div className="flex items-center justify-end">
-          {response !== null || response !== "" ? (
+          {response ? (
             <p className="text-slate-900 dark:text-slate-200 mt-0 mb-0 mr-4">{response}</p>
           ) : null}
           <button
             type="submit"
+            disabled={isSubmitting || !recaptchaSiteKey}
             className="border-2 border-black dark:border-white bg-white dark:bg-neutral-800 px-5 py-3 font-semibold text-black dark:text-white shadow-[4px_4px_0_0] hover:translate-1 hover:shadow-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:outline-0">
-            Send Message
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </div>
       </form>

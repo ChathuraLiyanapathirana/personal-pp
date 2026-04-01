@@ -5,26 +5,30 @@ const useMenuAnimation = (isOpen: boolean) => {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
+    // Target only SideMenu items — a bare "li" selector would match every list item
+    // on the page (e.g. nested experience cards) and hide them when the menu closes.
+    const menuItemSelector = "nav.menu li";
+
     const menuAnimations: Segment[] = isOpen
       ? [
           [
-            "nav",
+            "nav.menu",
             { transform: "translateX(0%)" },
             { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.6 },
           ],
           [
-            "li",
+            menuItemSelector,
             { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
             { delay: stagger(0.05), at: "-0.1" },
           ],
         ]
       : [
           [
-            "li",
+            menuItemSelector,
             { transform: "scale(0.5)", opacity: 0, filter: "blur(10px)" },
             { delay: stagger(0.05, { from: "last" }), at: "<" },
           ],
-          ["nav", { transform: "translateX(-100%)" }, { at: "-0.1" }],
+          ["nav.menu", { transform: "translateX(-100%)" }, { at: "-0.1" }],
         ];
 
     animate([

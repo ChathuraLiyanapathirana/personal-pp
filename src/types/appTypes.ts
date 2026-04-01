@@ -1,10 +1,12 @@
 export type ExperienceType = {
+    nested?: boolean;
     company: string;
     domain: string;
     product: string;
     duration: string;
     designation: string;
     description: string;
+    nestedItems?: ExperienceType[];
 };
 
 export type PostType = {
@@ -38,6 +40,7 @@ export type ExpertiseType = {
 
 export type HtmlRendererType = {
     htmlString: string;
+    className?: string;
 }
 
 export type AnimatedPathType = {
