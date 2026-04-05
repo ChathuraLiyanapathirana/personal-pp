@@ -100,50 +100,52 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col flex-1 justify-center items-start w-full h-screen md:p-8 xs:pt-4 xxs:pb-8">
+    <div className="flex w-full flex-1 flex-col items-start justify-center lg:max-w-xl">
       {recaptchaSiteKey ? (
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`}
           strategy="afterInteractive"
         />
       ) : null}
-      <h1 className="text-3xl lg:text-4xl font-semibold mt-0 xs:mb-4 text-slate-900 dark:text-white">Send me an Email</h1>
+      <h2 className="font-display mb-8 mt-0 text-2xl font-semibold text-ink dark:text-white sm:text-3xl lg:text-4xl">
+        Send me an Email
+      </h2>
       <form onSubmit={handleSubmit} className="w-full">
-        <div className="mb-4">
+        <div className="mb-5">
           <label htmlFor="name">
-            <span className="text-sm font-semibold text-slate-900 dark:text-white"> Your Name </span>
+            <span className="text-sm font-semibold text-ink dark:text-zinc-200"> Your Name </span>
             <input
               type="text"
               id="name"
               name="name"
-              className="mt-0.5 h-[50px] w-full border-2 border-black dark:border-white bg-white dark:bg-neutral-800 text-slate-900 dark:text-slate-200 shadow-[4px_4px_0_0] focus:ring-2 focus:ring-black dark:focus:ring-white sm:text-sm"
+              className="mt-2 h-12 w-full rounded-xl border border-ink/15 bg-white px-4 text-ink shadow-sm transition placeholder:text-zinc-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25 dark:border-white/15 dark:bg-zinc-900 dark:text-zinc-100 sm:text-sm"
               onChange={handleChange}
               required
               value={formData?.name}
             />
           </label>
         </div>
-        <div className="mb-4">
+        <div className="mb-5">
           <label htmlFor="email">
-            <span className="text-sm font-semibold text-slate-900 dark:text-white"> Your Email </span>
+            <span className="text-sm font-semibold text-ink dark:text-zinc-200"> Your Email </span>
             <input
               type="email"
               id="email"
               name="email"
-              className="mt-0.5 h-[50px] w-full border-2 border-black dark:border-white bg-white dark:bg-neutral-800 text-slate-900 dark:text-slate-200 shadow-[4px_4px_0_0] focus:ring-2 focus:ring-black dark:focus:ring-white sm:text-sm"
+              className="mt-2 h-12 w-full rounded-xl border border-ink/15 bg-white px-4 text-ink shadow-sm transition placeholder:text-zinc-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25 dark:border-white/15 dark:bg-zinc-900 dark:text-zinc-100 sm:text-sm"
               onChange={handleChange}
               required
               value={formData?.email}
             />
           </label>
         </div>
-        <div className="mb-6">
+        <div className="mb-8">
           <label htmlFor="message">
-            <span className="text-sm font-semibold text-slate-900 dark:text-white"> Your Message </span>
+            <span className="text-sm font-semibold text-ink dark:text-zinc-200"> Your Message </span>
             <textarea
               id="message"
               name="message"
-              className="mt-0.5 w-full border-2 border-black dark:border-white bg-white dark:bg-neutral-800 text-slate-900 dark:text-slate-200 shadow-[4px_4px_0_0] focus:ring-2 focus:ring-black dark:focus:ring-white sm:text-sm"
+              className="mt-2 w-full resize-y rounded-xl border border-ink/15 bg-white px-4 py-3 text-ink shadow-sm transition placeholder:text-zinc-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25 dark:border-white/15 dark:bg-zinc-900 dark:text-zinc-100 sm:text-sm"
               value={formData?.message}
               required
               onChange={handleChange}
@@ -151,14 +153,15 @@ const ContactForm = () => {
             />
           </label>
         </div>
-        <div className="flex items-center justify-end">
+        <div className="flex flex-wrap items-center justify-end gap-4">
           {response ? (
-            <p className="text-slate-900 dark:text-slate-200 mt-0 mb-0 mr-4">{response}</p>
+            <p className="mb-0 mt-0 text-sm text-ink dark:text-zinc-200">{response}</p>
           ) : null}
           <button
             type="submit"
             disabled={isSubmitting || !recaptchaSiteKey}
-            className="border-2 border-black dark:border-white bg-white dark:bg-neutral-800 px-5 py-3 font-semibold text-black dark:text-white shadow-[4px_4px_0_0] hover:translate-1 hover:shadow-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:outline-0">
+            className="rounded-full border border-ink/15 bg-ink px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white shadow-brand-sm transition hover:-translate-y-0.5 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-brand/40 disabled:cursor-not-allowed disabled:opacity-60 dark:border-white/20 dark:bg-zinc-100 dark:text-ink dark:shadow-[4px_4px_0_0_#22dd55] dark:hover:bg-white"
+          >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </div>

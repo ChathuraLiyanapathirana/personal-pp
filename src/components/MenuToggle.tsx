@@ -11,7 +11,12 @@ const Path = (props: AnimatedPathType) => (
 );
 
 export const MenuToggle = ({ toggle }: any) => (
-  <button className="float-button shadow-md " onClick={toggle}>
+  <button
+    type="button"
+    className="float-button md:hidden"
+    onClick={toggle}
+    aria-label="Open menu"
+  >
     <svg width="30" height="18" viewBox="0 0 23 18">
       <Path
         d="M 2 2.5 L 20 2.5"

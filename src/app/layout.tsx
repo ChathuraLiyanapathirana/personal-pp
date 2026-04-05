@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import PageMeshBackground from "@/components/PageMeshBackground";
 
-const inter = Inter({ subsets: ["latin"] });
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  variable: "--font-fira",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "LPCB Portfolio",
@@ -18,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`portfolio-body ${inter.className} bg-white dark:bg-neutral-900`}>
+      <body
+        className={`portfolio-body ${firaCode.variable} font-sans antialiased bg-transparent text-ink dark:text-zinc-100`}
+      >
+        <PageMeshBackground />
         <script
           dangerouslySetInnerHTML={{
             __html: `

@@ -14,6 +14,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Loader from "@/components/Loader";
 import ProjectSection from "@/components/sections/ProjectSection";
+import SiteHeader from "@/components/SiteHeader";
 config.autoAddCss = false;
 
 export default function Home() {
@@ -21,7 +22,8 @@ export default function Home() {
 
   const scope = useMenuAnimation(isOpen);
   return (
-    <div ref={scope}>
+    <div ref={scope} className="relative overflow-x-hidden">
+      <SiteHeader />
       <SideMenu onClickItem={() => setIsOpen(!isOpen)} />
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <HelloSection />

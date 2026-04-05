@@ -2,37 +2,36 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <div className="md:container md:mx-auto min-h-screen bg-white pt-4 lg:pr-0 lg:pl-0 xxs:pr-4 xxs:pl-4">
-      <div className="flex flex-1 flex-col lg:items-start xs:items-end xs:justify-end">
-        <h1 className="text-4xl font-extrabold sm:text-4xl text-slate-900 mt-0 mb-0">
+    <div className="mx-auto min-h-[40vh] max-w-7xl px-5 pt-2 md:px-8 lg:px-10">
+      <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+        <h1 className="font-display mt-0 mb-0 text-4xl font-extrabold text-ink dark:text-white sm:text-4xl">
           Full blog site
         </h1>
         <a
           href="https://appcitor.com"
           target="_blank"
-          className="text-3xl font-extrabold sm:text-3xl mt-0 text-lime-300 underline mb-4"
+          rel="noopener noreferrer"
+          className="font-display mb-4 mt-0 text-2xl font-bold text-brand sm:text-3xl"
         >
           appcitor.com
         </a>
       </div>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 md:grid-cols-2 lg:gap-8">
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4">
         {Array.from(String(1234)).map((item, index) => {
           return (
-            <div className="rounded-lg" key={index}>
-              <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg h-full animate-pulse">
+            <div className="rounded-2xl" key={index}>
+              <article className="h-full overflow-hidden rounded-2xl border border-ink/10 bg-zinc-100/80 animate-pulse dark:border-white/10 dark:bg-zinc-800/50">
                 <div>
-                  <div className="h-56 w-full object-cover bg-slate-700" />
+                  <div className="h-56 w-full bg-zinc-300 dark:bg-zinc-700" />
                 </div>
 
-                <div className="bg-white p-4 sm:p-6 h-full">
-                  <span className="block bg-slate-700 h-3 space-y-6"> </span>
+                <div className="h-full bg-white p-4 dark:bg-zinc-900 sm:p-6">
+                  <span className="block h-3 bg-zinc-200 dark:bg-zinc-700"> </span>
 
-                  <a href="#">
-                    <h3 className="mt-0.5 h-5 bg-slate-700" />
-                  </a>
+                  <div className="mt-3 h-5 bg-zinc-200 dark:bg-zinc-700" />
 
-                  <p className="mt-2 h-10 bg-slate-700" />
-                  <div className="group mt-4 inline-flex items-center gap-1 text-sm font-medium h-2 bg-slate-700" />
+                  <p className="mt-2 h-10 bg-zinc-200 dark:bg-zinc-700" />
+                  <div className="mt-4 h-2 w-24 bg-zinc-200 dark:bg-zinc-700" />
                 </div>
               </article>
             </div>

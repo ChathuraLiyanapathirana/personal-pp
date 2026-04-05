@@ -4,19 +4,21 @@ type Props = {};
 
 const NotFound = (props: Props) => {
   return (
-    <div className="grid h-screen place-content-center bg-white px-4">
+    <div className="grid min-h-screen place-content-center px-4">
       <div className="text-center">
-        <h1 className="text-9xl font-black text-slate-200 mt-0 mb-4">404</h1>
+        <h1 className="font-display mt-0 mb-4 text-9xl font-black text-brand/25 dark:text-brand/20">
+          404
+        </h1>
 
-        <p className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+        <p className="font-display mb-4 text-2xl font-bold tracking-tight text-ink dark:text-white sm:text-4xl">
           Uh-oh!
         </p>
 
-        <p className="mt-0 text-gray-500">We can't find that page.</p>
+        <p className="mt-0 text-zinc-600 dark:text-zinc-400">We can't find that page.</p>
 
         <a
           href="/"
-          className="mt-0 inline-block rounded bg-slate-600 px-5 py-3 text-sm font-medium text-white hover:bg-slate-900 focus:outline-none focus:ring"
+          className="mt-8 inline-block rounded-full border border-ink/15 bg-ink px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white shadow-brand-sm transition hover:-translate-y-0.5 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-brand/40 dark:border-white/20 dark:bg-zinc-100 dark:text-ink dark:shadow-[4px_4px_0_0_#22dd55] dark:hover:bg-white"
         >
           Back to Home
         </a>

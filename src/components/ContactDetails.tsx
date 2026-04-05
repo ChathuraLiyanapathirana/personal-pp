@@ -9,77 +9,83 @@ import {
   faBloggerB,
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
-import {
-  faLocationPin,
-  faMobile,
-  faMailReply,
-  faPerson,
-} from "@fortawesome/free-solid-svg-icons";
 
 const ContactDetails = () => {
   return (
-    <div className="block border-2 border-black dark:border-white bg-gray-300 dark:bg-gray-600 p-4 shadow-[4px_4px_0_0] focus:ring-2 focus:ring-gray-300 dark:focus:ring-white focus:outline-0 sm:p-6 flex flex-col flex-1 justify-center items-start w-full h-screen">
-      <h1 className="text-4xl font-semibold mb-4 text-gray-900 dark:text-white mt-0">
+    <div className="flex w-full flex-1 flex-col justify-center rounded-2xl border border-ink/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900/90 sm:p-8 lg:max-w-md">
+      <h2 className="font-display mb-6 mt-0 text-2xl font-semibold text-ink dark:text-white sm:text-3xl">
         Contact Details
-      </h1>
-      <p className="text-gray-900 dark:text-white">
+      </h2>
+      <p className="text-ink dark:text-zinc-100">
         Full Name:{" "}
         {`${contactInfo.surName} ${contactInfo.name}`}
       </p>
-      <p className="text-gray-900 dark:text-white">
+      <p className="text-ink dark:text-zinc-100">
         Email:{" "}
         {contactInfo.email}
       </p>
-      <p className="text-gray-900 dark:text-white">
+      <p className="text-ink dark:text-zinc-100">
         Mobile:{" "}
         {contactInfo.mobile}
       </p>
-      <p className="text-gray-900 dark:text-white">
+      <p className="text-ink dark:text-zinc-100">
         Address:{" "}
         {contactInfo.address}
       </p>
-      <div className="flex flex-wrap gap-4">
+      <div className="mt-8 flex flex-wrap gap-3">
         <a
           href={contactInfo.blog}
           target="_blank"
-          className="w-14 h-14 bg-white dark:bg-gray-300 hover:bg-lime-400 dark:hover:bg-lime-700 rounded-lg flex justify-center items-center transition duration-300"
+          rel="noopener noreferrer"
+          className="flex h-12 w-12 items-center justify-center rounded-xl border border-ink/10 bg-zinc-50 text-ink transition hover:border-brand/40 hover:bg-brand-surface hover:text-brand dark:border-white/10 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:border-brand/50 dark:hover:bg-brand/10 dark:hover:text-brand"
+          aria-label="Blog"
         >
-          <FontAwesomeIcon icon={faBloggerB} size="2x" />
+          <FontAwesomeIcon icon={faBloggerB} className="h-6 w-6" />
         </a>
         <a
           href={contactInfo.linkedin}
           target="_blank"
-          className="w-14 h-14 bg-white dark:bg-gray-300 hover:bg-cyan-600 dark:hover:bg-cyan-700 rounded-lg flex justify-center items-center transition duration-300"
+          rel="noopener noreferrer"
+          className="flex h-12 w-12 items-center justify-center rounded-xl border border-ink/10 bg-zinc-50 text-ink transition hover:border-brand/40 hover:bg-brand-surface hover:text-brand dark:border-white/10 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:border-brand/50 dark:hover:bg-brand/10 dark:hover:text-brand"
+          aria-label="LinkedIn"
         >
-          <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+          <FontAwesomeIcon icon={faLinkedinIn} className="h-6 w-6" />
         </a>
         <a
           href={contactInfo.git}
           target="_blank"
-          className="w-14 h-14 bg-white dark:bg-gray-300 hover:bg-slate-400 dark:hover:bg-slate-700 rounded-lg flex justify-center items-center transition duration-300"
+          rel="noopener noreferrer"
+          className="flex h-12 w-12 items-center justify-center rounded-xl border border-ink/10 bg-zinc-50 text-ink transition hover:border-brand/40 hover:bg-brand-surface hover:text-brand dark:border-white/10 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:border-brand/50 dark:hover:bg-brand/10 dark:hover:text-brand"
+          aria-label="GitHub"
         >
-          <FontAwesomeIcon icon={faGithub} size="2x" />
+          <FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
         </a>
         <a
           href={contactInfo.facebook}
           target="_blank"
-          className="w-14 h-14 bg-white dark:bg-gray-300 hover:bg-sky-600 dark:hover:bg-sky-700 rounded-lg flex justify-center items-center transition duration-300"
+          rel="noopener noreferrer"
+          className="flex h-12 w-12 items-center justify-center rounded-xl border border-ink/10 bg-zinc-50 text-ink transition hover:border-brand/40 hover:bg-brand-surface hover:text-brand dark:border-white/10 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:border-brand/50 dark:hover:bg-brand/10 dark:hover:text-brand"
+          aria-label="Facebook"
         >
-          <FontAwesomeIcon icon={faFacebookF} size="2x" />
+          <FontAwesomeIcon icon={faFacebookF} className="h-6 w-6" />
         </a>
         <a
           href={contactInfo.whatsapp}
           target="_blank"
-          className="w-14 h-14 bg-white dark:bg-gray-300 hover:bg-teal-500 dark:hover:bg-teal-700 rounded-lg flex justify-center items-center transition duration-300"
+          rel="noopener noreferrer"
+          className="flex h-12 w-12 items-center justify-center rounded-xl border border-ink/10 bg-zinc-50 text-ink transition hover:border-brand/40 hover:bg-brand-surface hover:text-brand dark:border-white/10 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:border-brand/50 dark:hover:bg-brand/10 dark:hover:text-brand"
+          aria-label="WhatsApp"
         >
-          <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+          <FontAwesomeIcon icon={faWhatsapp} className="h-6 w-6" />
         </a>
         <a
           href={contactInfo.instagram}
           target="_blank"
-          className="w-14 h-14 bg-white dark:bg-gray-300 hover:bg-pink-600 dark:hover:bg-pink-700 rounded-lg flex justify-center items-center transition duration-300"
+          rel="noopener noreferrer"
+          className="flex h-12 w-12 items-center justify-center rounded-xl border border-ink/10 bg-zinc-50 text-ink transition hover:border-brand/40 hover:bg-brand-surface hover:text-brand dark:border-white/10 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:border-brand/50 dark:hover:bg-brand/10 dark:hover:text-brand"
+          aria-label="Instagram"
         >
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
+          <FontAwesomeIcon icon={faInstagram} className="h-6 w-6" />
         </a>
       </div>
     </div>

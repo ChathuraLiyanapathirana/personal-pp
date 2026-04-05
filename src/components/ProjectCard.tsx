@@ -27,46 +27,54 @@ type Props = {
 const ProjectCard = ({
     title, by, description, link, linkLabel, link2, linkLabel2, job, toColor
 }: Props) => {
+    const accent = toColorToHex[toColor] ?? "#22dd55";
     return (
-        <div
-            className="block border-2 border-black dark:border-white bg-gray-300 dark:bg-gray-600 p-4 hover:bg-lime-100 dark:hover:bg-gray-500 focus-within:ring-2 focus-within:ring-gray-300 dark:focus-within:ring-white focus-within:outline-0 sm:p-6 w-full min-w-0 max-h-80"
-            style={{ boxShadow: `4px 4px 0 0 ${toColorToHex[toColor] ?? "#000"}` }}
+        <article
+            className="group flex h-full min-h-0 w-full min-w-0 flex-col rounded-2xl border border-ink/10 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/35 hover:shadow-brand focus-within:outline-none focus-within:ring-2 focus-within:ring-brand/40 dark:border-white/10 dark:bg-zinc-900/90 sm:p-6"
+            style={{ boxShadow: `4px 4px 0 0 ${accent}` }}
         >
-            <div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white sm:text-xl">
+            <div className="shrink-0">
+                <h3 className="font-display text-lg font-bold text-ink dark:text-white sm:text-xl">
                     {title}
                 </h3>
-                <p className="mt-1 text-xs font-medium text-gray-600 dark:text-gray-200">By {by}</p>
+                <p className="mt-1 text-xs font-medium text-zinc-500 dark:text-zinc-400">By {by}</p>
             </div>
 
-            <div className="-mt-2">
-                <p className="text-pretty text-sm text-gray-700 dark:text-gray-200">
+            <div className="mt-3 flex min-h-0 flex-1 flex-col gap-3">
+                <p className="text-pretty break-words text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
                     {description}
                 </p>
+                {job ? (
+                    <p className="text-xs text-zinc-500 dark:text-zinc-500">{job}</p>
+                ) : null}
             </div>
 
-            {job && (
-                <dd className="text-xs text-gray-500 dark:text-gray-400 -mt-4">
-                    {job}
-                </dd>
-            )}
-
-            <dl className="mt-6 flex gap-4 sm:gap-6">
-                <div className="flex flex-col-reverse">
-                    <dt className="text-sm font-medium text-gray-600 dark:text-white flex">
-                        <a href={link} target="_blank" rel="noopener noreferrer" className="text-lime-600 hover:underline">
-                            {linkLabel}
+            <dl className="mt-auto shrink-0 border-t border-zinc-200/80 pt-4 dark:border-zinc-700/80">
+                <dt className="text-xs font-medium uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                    References
+                </dt>
+                <dd className="mt-2 flex flex-col gap-2 text-sm font-medium text-zinc-700 dark:text-zinc-200 sm:flex-row sm:flex-wrap sm:gap-x-3 sm:gap-y-1">
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-brand-dim underline-offset-4 transition hover:text-brand hover:underline dark:text-brand"
+                    >
+                        {linkLabel}
+                    </a>
+                    {link2 && (
+                        <a
+                            href={link2}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-brand-dim underline-offset-4 transition hover:text-brand hover:underline dark:text-brand"
+                        >
+                            {linkLabel2}
                         </a>
-                        {link2 && (
-                            <a href={link2} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">
-                                , {linkLabel2}
-                            </a>
-                        )}
-                    </dt>
-                    <dd className="text-xs text-gray-500 dark:text-white">References</dd>
-                </div>
+                    )}
+                </dd>
             </dl>
-        </div>
+        </article>
     )
 }
 

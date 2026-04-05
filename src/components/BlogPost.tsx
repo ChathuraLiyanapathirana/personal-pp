@@ -10,7 +10,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
 
   return (
     <CardContainer className="inter-var w-full">
-      <CardBody className="bg-slate-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] !h-auto rounded-xl p-2 border  ">
+      <CardBody className="group/card relative !h-auto w-auto rounded-2xl border border-ink/10 bg-zinc-50 p-2 transition hover:border-brand/30 hover:shadow-brand dark:border-white/10 dark:bg-zinc-950 dark:hover:shadow-brand sm:w-[30rem]">
 
         <div className="rounded-lg mb-4">
           {/* <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg h-full"> */}
@@ -36,7 +36,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               translateZ="70"
               className="text-xl dark:text-white"
             >
-              <time dateTime={formatedDate} className="block text-xs text-gray-500 dark:text-gray-300 ms-2">
+              <time dateTime={formatedDate} className="ms-2 block text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                 {" "}
                 {formatedDate}{" "}
               </time>
@@ -45,7 +45,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               translateZ="80"
               className="text-xl font-bold text-neutral-600 dark:text-white"
             >
-              <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white ms-2">
+              <h3 className="font-display ms-2 mt-0.5 text-lg text-ink dark:text-white">
                 <HtmlRenderer htmlString={title} />
               </h3>
             </CardItem>
@@ -53,7 +53,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               translateZ="70"
               className="text-xl dark:text-white"
             >
-              <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-200 ms-2">
+              <div className="ms-2 mt-2 line-clamp-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
                 <HtmlRenderer htmlString={description} />
               </div>
             </CardItem>
@@ -64,12 +64,13 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               <a
                 href={contactInfo.blog}
                 target="_blank"
-                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-gray-800 dark:text-white ms-2"
+                rel="noopener noreferrer"
+                className="group ms-2 mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand transition hover:text-brand-dim dark:text-brand"
               >
                 Find out more
                 <span
                   aria-hidden="true"
-                  className="block transition-all group-hover:ms-0.5 rtl:rotate-180 text-gray-800 dark:text-white"
+                  className="block transition-transform group-hover:translate-x-0.5"
                 >
                   &rarr;
                 </span>

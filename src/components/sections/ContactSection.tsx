@@ -1,18 +1,25 @@
 import React from "react";
 import ContactForm from "../ContactForm";
 import ContactDetails from "../ContactDetails";
+import SectionHeading from "../SectionHeading";
 
 const ContactSection = () => {
   return (
     <div
-      className="md:container md:mx-auto h-screen bg-white dark:bg-neutral-900 flex flex-1 sm:flex-row flex-col items-start gap-6 xs:mt-8 lg:pr-0 lg:pl-0 xxs:pr-4 xxs:pl-4"
+      className="relative border-t border-zinc-200/80 py-16 dark:border-white/10 md:py-24"
       id="contact"
     >
-      {/* Contact Details */}
-      <ContactDetails />
-
-      {/* Contact Form */}
-      <ContactForm />
+      <div className="relative mx-auto max-w-6xl px-5 md:px-8 lg:px-10">
+        <SectionHeading
+          eyebrow="Reach out"
+          title="Contact"
+          description="Questions, collaborations, or opportunities, send a message or connect on social."
+        />
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-stretch lg:gap-16">
+          <ContactDetails />
+          <ContactForm />
+        </div>
+      </div>
     </div>
   );
 };
