@@ -10,12 +10,19 @@ const Path = (props: AnimatedPathType) => (
   />
 );
 
-export const MenuToggle = ({ toggle }: any) => (
+type MenuToggleProps = {
+  toggle: () => void;
+  isOpen: boolean;
+};
+
+export const MenuToggle = ({ toggle, isOpen }: MenuToggleProps) => (
   <button
     type="button"
     className="float-button md:hidden"
     onClick={toggle}
-    aria-label="Open menu"
+    aria-label={isOpen ? "Close menu" : "Open menu"}
+    aria-expanded={isOpen}
+    aria-controls="mobile-navigation"
   >
     <svg width="30" height="18" viewBox="0 0 23 18">
       <Path

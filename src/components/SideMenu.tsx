@@ -17,7 +17,7 @@ const SideMenu = ({ onClickItem, activeSection }: SideMenuType) => {
   };
 
   return (
-    <nav className="menu" aria-label="Section navigation">
+    <nav id="mobile-navigation" className="menu" aria-label="Section navigation">
       <ul>
         {item("hello", "Home")}
         {item("experience", "Experience")}

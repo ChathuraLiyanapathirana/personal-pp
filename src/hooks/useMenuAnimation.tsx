@@ -45,7 +45,7 @@ const useMenuAnimation = (isOpen: boolean) => {
       ],
       ...menuAnimations,
     ]);
-  }, [isOpen]);
+  }, [animate, isOpen]);
 
   return scope;
 };

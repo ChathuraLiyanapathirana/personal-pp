@@ -1,44 +1,24 @@
-"use client";
-
 import AboutSection from "@/components/sections/AboutSection";
 import BlogSection from "@/components/sections/BlogSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import HelloSection from "@/components/sections/HelloSection";
-import { MenuToggle } from "@/components/MenuToggle";
-import SideMenu from "@/components/SideMenu";
-import useMenuAnimation from "@/hooks/useMenuAnimation";
-import { useActiveSection } from "@/hooks/useActiveSection";
-import { Suspense, useState } from "react";
+import HomeClientShell from "@/components/HomeClientShell";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Loader from "@/components/Loader";
 import ProjectSection from "@/components/sections/ProjectSection";
-import SiteHeader from "@/components/SiteHeader";
 config.autoAddCss = false;
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
-  const activeSection = useActiveSection();
-
-  const scope = useMenuAnimation(isOpen);
   return (
-    <div ref={scope} className="relative overflow-x-hidden">
-      <SiteHeader activeSection={activeSection} />
-      <SideMenu
-        onClickItem={() => setIsOpen(!isOpen)}
-        activeSection={activeSection}
-      />
-      <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+    <HomeClientShell>
       <HelloSection />
       {/* <AboutSection /> */}
       <ExperienceSection />
       <ProjectSection />
-      <Suspense fallback={<Loader />}>
-        <BlogSection />
-      </Suspense>
+      <BlogSection />
       <ContactSection />
-    </div>
+    </HomeClientShell>
   );
 }

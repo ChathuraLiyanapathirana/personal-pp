@@ -1,9 +1,34 @@
 import React from "react";
 import { contactInfo } from "@/constants/appConstant";
-import WPBlogContent from "../WPBlogContent";
 import SectionHeading from "../SectionHeading";
+import BlogPost from "../BlogPost";
+import { PostType } from "@/types/appTypes";
 
-const BlogSection = () => {
+async function getPosts(): Promise<PostType[]> {
+  const api = process.env.WP_URL;
+
+  if (!api) {
+    return [];
+  }
+
+  try {
+    const response = await fetch(api, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!response.ok) {
+      return [];
+    }
+
+    return response.json();
+  } catch {
+    return [];
+  }
+}
+
+const BlogSection = async () => {
+  const posts = await getPosts();
+
   return (
     <div
       className="relative min-h-screen border-t border-zinc-200/80 py-16 dark:border-white/10 md:py-24"
@@ -27,7 +52,23 @@ const BlogSection = () => {
           </a>
         </div>
         <div className="mt-2">
-          <WPBlogContent />
+          {posts.length > 0 ? (
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+              {posts.map((item, index) => (
+                <BlogPost
+                  date={item.date}
+                  description={item.excerpt.rendered}
+                  image={item._embedded["wp:featuredmedia"][0].media_details?.file}
+                  title={item.title.rendered}
+                  key={`${item.title.rendered}-${index}`}
+                />
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              Blog posts are temporarily unavailable.
+            </p>
+          )}
         </div>
         <div className="mt-12 flex justify-end">
           <a
