@@ -15,7 +15,7 @@ const BlogSection = () => {
             className="mb-0"
             eyebrow="Writing"
             title="Blog"
-            description="Long-form posts and technical notes, full archive lives on the main blog site."
+            description="Long form posts and technical notes, full archive lives on the main blog site."
           />
           <a
             href={contactInfo.blog}

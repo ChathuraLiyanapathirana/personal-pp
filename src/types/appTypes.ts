@@ -55,6 +55,7 @@ export type AnimatedPathType = {
 
 export type SideMenuType = {
     onClickItem: () => void;
+    activeSection: string;
 };
 
 export type ProjectType = {

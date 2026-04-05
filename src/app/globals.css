@@ -140,6 +140,15 @@ p {
   color: #22dd55;
 }
 
+.menu li.active {
+  background: rgba(34, 221, 85, 0.14);
+  color: #22dd55;
+}
+
+.menu li.active:hover {
+  background: rgba(34, 221, 85, 0.18);
+}
+
 ul,
 li {
   list-style: none;

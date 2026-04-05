@@ -1,39 +1,29 @@
 import { SideMenuType } from "@/types/appTypes";
 
-const SideMenu = ({ onClickItem }: SideMenuType) => {
+const SideMenu = ({ onClickItem, activeSection }: SideMenuType) => {
+  const item = (id: string, label: string) => {
+    const isActive = activeSection === id;
+    return (
+      <li className={isActive ? "active" : undefined}>
+        <a
+          href={`#${id}`}
+          onClick={onClickItem}
+          aria-current={isActive ? "page" : undefined}
+        >
+          {label}
+        </a>
+      </li>
+    );
+  };
+
   return (
-    <nav className="menu">
+    <nav className="menu" aria-label="Section navigation">
       <ul>
-        <li>
-          <a href="#hello" onClick={onClickItem}>
-            Home
-          </a>
-        </li>
-        {/* <li>
-          <a href="#about" onClick={onClickItem}>
-            About
-          </a>
-        </li> */}
-        <li>
-          <a href="#experience" onClick={onClickItem}>
-            Experience
-          </a>
-        </li>
-        <li>
-          <a href="#project" onClick={onClickItem}>
-            Projects
-          </a>
-        </li>
-        <li>
-          <a href="#blog" onClick={onClickItem}>
-            Blog
-          </a>
-        </li>
-        <li>
-          <a href="#contact" onClick={onClickItem}>
-            Contact
-          </a>
-        </li>
+        {item("hello", "Home")}
+        {item("experience", "Experience")}
+        {item("project", "Projects")}
+        {item("blog", "Blog")}
+        {item("contact", "Contact")}
       </ul>
     </nav>
   );

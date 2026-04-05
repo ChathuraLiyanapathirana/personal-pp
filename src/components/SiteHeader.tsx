@@ -1,12 +1,18 @@
+import { cn } from "@/lib/utils";
+
 const nav = [
   { href: "#hello", label: "Home" },
   { href: "#experience", label: "Experience" },
   { href: "#project", label: "Projects" },
   { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
-];
+] as const;
 
-const SiteHeader = () => {
+type SiteHeaderProps = {
+  activeSection: string;
+};
+
+const SiteHeader = ({ activeSection }: SiteHeaderProps) => {
   return (
     <header
       className="pointer-events-none fixed inset-x-0 top-0 z-[1000] hidden md:block"
@@ -29,15 +35,25 @@ const SiteHeader = () => {
           LPCB
         </a>
         <nav className="flex items-center gap-1 lg:gap-2">
-          {nav.map(({ href, label }) => (
-            <a
-              key={href}
-              href={href}
-              className="rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-zinc-700 transition-colors duration-200 hover:bg-black/[0.06] hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50 dark:text-zinc-300 dark:hover:bg-white/10 dark:hover:text-brand dark:focus-visible:ring-offset-ink md:text-sm md:tracking-[0.14em]"
-            >
-              {label}
-            </a>
-          ))}
+          {nav.map(({ href, label }) => {
+            const id = href.slice(1);
+            const isActive = activeSection === id;
+            return (
+              <a
+                key={href}
+                href={href}
+                aria-current={isActive ? "page" : undefined}
+                className={cn(
+                  "rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50 dark:focus-visible:ring-offset-ink md:text-sm md:tracking-[0.14em]",
+                  isActive
+                    ? "bg-black/[0.08] text-ink dark:bg-white/15 dark:text-brand"
+                    : "text-zinc-700 hover:bg-black/[0.06] hover:text-ink dark:text-zinc-300 dark:hover:bg-white/10 dark:hover:text-brand"
+                )}
+              >
+                {label}
+              </a>
+            );
+          })}
         </nav>
       </div>
     </header>

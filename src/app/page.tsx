@@ -8,6 +8,7 @@ import HelloSection from "@/components/sections/HelloSection";
 import { MenuToggle } from "@/components/MenuToggle";
 import SideMenu from "@/components/SideMenu";
 import useMenuAnimation from "@/hooks/useMenuAnimation";
+import { useActiveSection } from "@/hooks/useActiveSection";
 import { Suspense, useState } from "react";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -19,12 +20,16 @@ config.autoAddCss = false;
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const activeSection = useActiveSection();
 
   const scope = useMenuAnimation(isOpen);
   return (
     <div ref={scope} className="relative overflow-x-hidden">
-      <SiteHeader />
-      <SideMenu onClickItem={() => setIsOpen(!isOpen)} />
+      <SiteHeader activeSection={activeSection} />
+      <SideMenu
+        onClickItem={() => setIsOpen(!isOpen)}
+        activeSection={activeSection}
+      />
       <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       <HelloSection />
       {/* <AboutSection /> */}

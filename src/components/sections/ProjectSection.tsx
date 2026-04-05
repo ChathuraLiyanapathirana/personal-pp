@@ -17,13 +17,13 @@ const ProjectSection = () => {
           description="Professional builds shipped with teams, plus personal experiments and side projects."
         />
         <SectionSubheading className="mt-2">Professional Contributions</SectionSubheading>
-        <div className="mt-6 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {professionalProjects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
         <SectionSubheading className="mt-14">Personal Contributions</SectionSubheading>
-        <div className="mt-6 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {personalProjects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}

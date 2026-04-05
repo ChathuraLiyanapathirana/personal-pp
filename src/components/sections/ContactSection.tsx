@@ -6,10 +6,10 @@ import SectionHeading from "../SectionHeading";
 const ContactSection = () => {
   return (
     <div
-      className="relative border-t border-zinc-200/80 py-16 dark:border-white/10 md:py-24"
+      className="relative flex min-h-screen flex-col justify-center border-t border-zinc-200/80 py-16 dark:border-white/10 md:py-24"
       id="contact"
     >
-      <div className="relative mx-auto max-w-6xl px-5 md:px-8 lg:px-10">
+      <div className="relative mx-auto w-full max-w-6xl px-5 md:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Reach out"
           title="Contact"
