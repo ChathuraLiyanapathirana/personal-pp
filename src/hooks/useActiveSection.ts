@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 export const NAV_SECTION_IDS = [
   "hello",
   "experience",
+  "resume",
   "project",
   "blog",
   "contact",

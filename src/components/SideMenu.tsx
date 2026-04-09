@@ -21,6 +21,7 @@ const SideMenu = ({ onClickItem, activeSection }: SideMenuType) => {
       <ul>
         {item("hello", "Home")}
         {item("experience", "Experience")}
+        {item("resume", "Resume")}
         {item("project", "Projects")}
         {item("blog", "Blog")}
         {item("contact", "Contact")}

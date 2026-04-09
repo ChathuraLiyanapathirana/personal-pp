@@ -8,6 +8,7 @@ import HomeClientShell from "@/components/HomeClientShell";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import ProjectSection from "@/components/sections/ProjectSection";
+import ResumeSection from "@/components/sections/ResumeSection";
 config.autoAddCss = false;
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <HelloSection />
       {/* <AboutSection /> */}
       <ExperienceSection />
+      <ResumeSection />
       <ProjectSection />
       <BlogSection />
       <ContactSection />
