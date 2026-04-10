@@ -48,7 +48,7 @@ const HelloSection = () => {
             <p className="mt-0 max-w-lg text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
               Passionate about crafting innovative software solutions that drive
               efficiency and elevate user experiences. With over 8 years of
-              hands-on experience delivering cutting-edge solutions.
+              hands on experience delivering cutting edge solutions.
             </p>
 
             {/* CTA Buttons */}
