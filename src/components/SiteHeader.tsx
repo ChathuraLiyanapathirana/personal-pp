@@ -31,7 +31,7 @@ const SiteHeader = ({ activeSection }: SiteHeaderProps) => {
       <div className="pointer-events-auto relative z-10 mx-auto flex h-24 max-w-6xl items-center justify-between px-6 pr-[4.5rem] lg:px-8 lg:pr-24">
         <a
           href="#hello"
-          className="font-display text-sm font-semibold tracking-[0.22em] text-ink transition-colors duration-200 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50 dark:text-zinc-50 dark:hover:text-brand dark:focus-visible:ring-offset-ink md:text-base"
+          className="font-display text-xl font-semibold tracking-[0.22em] text-ink transition-colors duration-200 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50 dark:text-zinc-50 dark:hover:text-brand dark:focus-visible:ring-offset-ink"
         >
           LPCB
         </a>
