@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import SectionHeading from "../SectionHeading";
+import { faqItems } from "@/constants/faq";
 
 const ResumeSection = () => {
   return (
@@ -30,6 +31,38 @@ const ResumeSection = () => {
             <FontAwesomeIcon icon={faFileArrowDown} className="h-4 w-4" aria-hidden />
             Download resume
           </a>
+        </div>
+
+        <div className="mt-8">
+          <div className="mb-5">
+            <h3 className="font-display text-2xl font-bold text-ink dark:text-white">
+              Quick Answers
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              A compact summary for recruiters and clients reviewing fit before opening the full resume.
+            </p>
+          </div>
+          <div className="grid items-start gap-4 md:grid-cols-2">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="group h-fit self-start rounded-2xl border border-ink/10 bg-white/90 p-5 shadow-sm transition hover:border-brand/25 dark:border-white/10 dark:bg-zinc-900/90"
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-lg font-semibold text-ink marker:hidden dark:text-white">
+                  <span>{item.question}</span>
+                  <span
+                    aria-hidden="true"
+                    className="mt-0.5 text-brand transition-transform group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
         </div>
       </div>
     </div>

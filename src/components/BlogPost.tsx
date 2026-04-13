@@ -22,7 +22,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
             <Image
               width={500}
               height={500}
-              alt="Office"
+              alt={`${title.replace(/<[^>]+>/g, "")} cover image`}
               src={`${process.env.IMAGE_PREFIX}${image}`}
               className="h-56 w-full object-cover rounded-xl mb-4"
               loading="lazy"
@@ -36,7 +36,7 @@ const BlogPost = ({ title, date, description, image }: BlogPostType) => {
               translateZ="70"
               className="text-xl dark:text-white"
             >
-              <time dateTime={formatedDate} className="ms-2 block text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+              <time dateTime={date} className="ms-2 block text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                 {" "}
                 {formatedDate}{" "}
               </time>

@@ -25,28 +25,28 @@ const HelloSection = () => {
           {/* Content */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Location badge */}
-            <div className="inline-flex items-center gap-1.5 text-sm text-zinc-500 dark:text-zinc-400">
-            Based in Sri Lanka 🇱🇰, love working remotely 🌏
-             </div>
+            <div className="inline-flex items-left gap-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+              Based in Sri Lanka, building for global teams across mobile and web.
+            </div>
 
             {/* Main heading */}
-            <h1 className="font-display mt-8 mb-2 text-4xl font-bold tracking-tight text-ink dark:text-zinc-50 sm:text-5xl md:text-6xl">
-              Hello, I&apos;m{" "}
+            <h1 className="font-display mt-8 mb-2 md:text-left text-4xl font-bold tracking-tight text-ink dark:text-zinc-50 sm:text-5xl md:text-6xl">
+              React Native Engineer{" "}
               <span className="bg-gradient-to-r from-brand to-brand-dim bg-clip-text text-transparent">
-                Chathura
+                Chathura Buddhika
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="mt-0 text-xl font-medium text-ink/80 dark:text-zinc-300 sm:text-2xl">
-              Senior Software Engineer
+              Senior Software Engineer building mobile apps and modern web products
             </p>
 
             {/* Description */}
-            <p className="mt-0 max-w-lg text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-              Passionate about crafting innovative software solutions that drive
-              efficiency and elevate user experiences. With over 8 years of
-              hands on experience delivering cutting edge solutions.
+            <p className="mt-0 max-w-xl text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+              I specialize in React Native and build high quality mobile apps for
+              iOS and Android. I also work with React and Next.js when products
+              need strong support across both mobile and web.
             </p>
 
             {/* CTA Buttons */}

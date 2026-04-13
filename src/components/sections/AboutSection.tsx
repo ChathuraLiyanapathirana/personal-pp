@@ -13,7 +13,7 @@ const AboutSection = () => {
         <SectionHeading
           eyebrow="Toolkit"
           title="Expertise"
-          description="Technologies and practices I use to design, build, and ship software."
+          description="Core technologies I use as a React Native engineer and mobile software engineer to design, build, optimize, and ship production software."
           className="mx-auto max-w-7xl"
         />
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 mt-2 w-full">

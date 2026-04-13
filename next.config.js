@@ -9,8 +9,8 @@ const nextConfig = {
     ]
   },
   env: {
-    WP_URL: process.env.WP_URL,
-    IMAGE_PREFIX: process.env.IMAGE_PREFIX,
+    WP_URL: process.env.WP_URL || "",
+    IMAGE_PREFIX: process.env.IMAGE_PREFIX || "",
   },
 }
 
