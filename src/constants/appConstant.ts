@@ -228,6 +228,7 @@ export const experienceSummary: ExperienceType[] = [
 
 export const professionalProjects: ProjectType[] = [
     {
+        slug: "komoju",
         title: "Komoju",
         by: "Delica",
         description: "Japan based payment gateway offering seamless integration for online merchants.",
@@ -235,8 +236,22 @@ export const professionalProjects: ProjectType[] = [
         link: "https://www.npmjs.com/package/@komoju/komoju-react-native",
         linkLabel: "Npm repo",
         toColor: "to-lime-600",
+        bannerImages: ["/images/komoju banner.png"],
+        overview: "Komoju is a payment platform used by online merchants in Japan. My contribution focused on building a reliable React Native SDK experience that helped teams integrate payment capabilities into mobile products with less friction.",
+        contributions: [
+            "Worked on the React Native SDK layer with a focus on developer experience and integration reliability.",
+            "Improved the bridge between native capabilities and the JavaScript API used by app teams.",
+            "Helped shape a cleaner integration flow so merchants could adopt the SDK with less setup effort.",
+        ],
+        outcomes: [
+            "Created a more practical mobile integration path for teams using Komoju in React Native apps.",
+            "Reduced integration complexity by keeping the SDK surface clear and focused.",
+            "Supported a reusable mobile payment capability that could fit multiple merchant products.",
+        ],
+        stack: ["React Native", "TypeScript", "SDK development", "Mobile payments"],
     },
     {
+        slug: "singlife",
         title: "Singlife",
         by: "Singlife ph & Singlife singapore",
         description: "Singapore-based financial company offering a wide range of products and services.",
@@ -246,8 +261,22 @@ export const professionalProjects: ProjectType[] = [
         link2: "https://singlife.com.ph/",
         linkLabel2: "Singlife Ph",
         toColor: "to-red-500",
+        bannerImages: ["/images/singlife ios banner.png", "/images/singlife android banner.png"],
+        overview: "Singlife is a digital insurance and financial services product with real customer expectations around trust, reliability, and usability. I contributed to mobile delivery across iOS and Android with a focus on polished product execution.",
+        contributions: [
+            "Built and refined mobile app features for both iOS and Android experiences.",
+            "Worked on product quality, release readiness, and everyday delivery across a regulated domain.",
+            "Supported a mobile experience that balanced customer trust, usability, and maintainable implementation.",
+        ],
+        outcomes: [
+            "Helped ship customer facing mobile experiences in a finance related product environment.",
+            "Contributed to stable cross platform delivery with attention to usability and quality.",
+            "Supported a product that needed dependable engineering and consistent release execution.",
+        ],
+        stack: ["React Native", "iOS", "Android", "TypeScript", "Product delivery"],
     },
     {
+        slug: "lucky1",
         title: "Lucky1",
         by: "DigitalX",
         description: "Online lottery platform based in Sri Lanka.",
@@ -255,8 +284,22 @@ export const professionalProjects: ProjectType[] = [
         link: "https://lucky1.lk/",
         linkLabel: "Website",
         toColor: "to-blue-600",
+        bannerImages: ["/images/lucky1 banner.png"],
+        overview: "Lucky1 is an online lottery platform that needed both product functionality and dependable day to day engineering support. My work covered full stack delivery and reusable widget development for the platform.",
+        contributions: [
+            "Handled full stack implementation work across product features and platform behavior.",
+            "Built widgets and reusable pieces that supported the user experience across the site.",
+            "Contributed to a more maintainable product structure by focusing on practical delivery and reuse.",
+        ],
+        outcomes: [
+            "Helped deliver a lottery platform experience with reusable building blocks.",
+            "Supported faster feature work by creating components that could be reused across flows.",
+            "Contributed to a stronger product foundation for ongoing development.",
+        ],
+        stack: ["React", "TypeScript", "Widgets", "Full stack development"],
     },
     {
+        slug: "sripay",
         title: "SriPay",
         by: "Boswin pvt Ltd",
         description: "Payment gateway based in Sri Lanka, integrated with Alipay.",
@@ -264,8 +307,22 @@ export const professionalProjects: ProjectType[] = [
         link: "https://sripay.lk/",
         linkLabel: "Website",
         toColor: "to-sky-600",
+        bannerImages: ["/images/sri pay banner.png"],
+        overview: "SriPay is a payment gateway product in Sri Lanka with merchant and transaction focused workflows. I contributed across both full stack development and mobile application delivery during the product lifecycle.",
+        contributions: [
+            "Worked on backend and frontend functionality that supported payment related product workflows.",
+            "Built mobile application features using Ionic to extend the platform experience.",
+            "Helped connect product needs across web, backend, and mobile touchpoints.",
+        ],
+        outcomes: [
+            "Supported a connected product experience across web and mobile surfaces.",
+            "Contributed to a payment focused platform that needed reliable implementation and clear flows.",
+            "Helped move product delivery forward across multiple layers of the stack.",
+        ],
+        stack: ["Ionic", "TypeScript", "Mobile development", "Full stack development"],
     },
     {
+        slug: "patpat-mobile",
         title: "Patpat Mobile",
         by: "patpat",
         description: "Sri Lanka's leading classified platform for iOS and Android.",
@@ -275,8 +332,22 @@ export const professionalProjects: ProjectType[] = [
         linkLabel: "Google Play",
         link2: "https://apps.apple.com/mk/app/patpat-lk/id1385368825",
         linkLabel2: "App Store",
+        bannerImages: ["/images/patpat ios banner.png", "/images/patpat android banner.png"],
+        overview: "Patpat Mobile is a classifieds product where mobile usability, marketplace clarity, and app performance matter to daily users. My work focused on building and improving the React Native app experience for both major mobile platforms.",
+        contributions: [
+            "Delivered React Native features for a marketplace style mobile product.",
+            "Worked on app quality, user flow clarity, and practical mobile performance improvements.",
+            "Supported a product experience that needed consistency across iOS and Android.",
+        ],
+        outcomes: [
+            "Helped strengthen the mobile experience for a high usage classified platform.",
+            "Contributed to cross platform product quality in a marketplace setting.",
+            "Supported ongoing feature delivery in a consumer facing app with real user expectations.",
+        ],
+        stack: ["React Native", "iOS", "Android", "Marketplace apps"],
     },
     {
+        slug: "helayes",
         title: "HelaYes",
         by: "bizgrow",
         description: "Sri Lanka travel and tourism companion that creates itineraries and helps you plan your trip.",
@@ -286,8 +357,22 @@ export const professionalProjects: ProjectType[] = [
         linkLabel: "Google Play",
         link2: "https://apps.apple.com/us/app/helayes/id6752722818",
         linkLabel2: "App Store",
+        bannerImages: ["/images/helayes ios banner.png", "/images/helayes android banner.png"],
+        overview: "HelaYes is a travel companion app designed to help people plan trips and navigate travel moments more easily. I contributed to the React Native mobile application with attention to usability, travel features, and product polish.",
+        contributions: [
+            "Built mobile experiences that supported itinerary and travel planning flows.",
+            "Worked on React Native delivery with attention to feature quality and app behavior.",
+            "Helped shape a product experience aimed at making travel planning more practical for users.",
+        ],
+        outcomes: [
+            "Contributed to a more complete travel companion experience on mobile.",
+            "Supported a product that combined planning, exploration, and everyday usability.",
+            "Helped ship a mobile app experience aligned with consumer travel expectations.",
+        ],
+        stack: ["React Native", "Travel apps", "iOS", "Android", "Mobile UX"],
     },
     {
+        slug: "coming-app",
         title: "Coming App",
         by: "Coming App",
         description: "A travel and adventure style community app for instant connections, create a profile, match with like-minded explorers, and discover spontaneous plans and experiences.",
@@ -297,6 +382,19 @@ export const professionalProjects: ProjectType[] = [
         linkLabel: "Google Play",
         link2: "https://apps.apple.com/us/app/coming-app-find-activity-pals/id6445868774",
         linkLabel2: "App Store",
+        bannerImages: ["/images/coming ios banner.png", "/images/coming android banner.png"],
+        overview: "Coming App is a social and activity discovery product centered on profiles, matching, and shared experiences. My work focused on React Native upgrade work and keeping the mobile application healthy during a demanding transition period.",
+        contributions: [
+            "Led important React Native upgrade work needed to keep the app moving forward.",
+            "Worked through compatibility and stability concerns that came with version changes.",
+            "Supported the product with practical engineering decisions during a sensitive mobile transition.",
+        ],
+        outcomes: [
+            "Helped keep the mobile app aligned with platform requirements and ongoing product needs.",
+            "Reduced upgrade risk by focusing on stability and delivery continuity.",
+            "Supported a social product experience that needed dependable engineering during change.",
+        ],
+        stack: ["React Native", "Version upgrades", "iOS", "Android", "App stability"],
     },
 ];
 

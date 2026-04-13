@@ -1,4 +1,8 @@
 import React from "react";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { ProjectType } from "@/types/appTypes";
 
 const toColorToHex: Record<string, string> = {
   "to-lime-600": "#65a30d",
@@ -12,19 +16,8 @@ const toColorToHex: Record<string, string> = {
   "to-gray-300": "#d1d5db",
 };
 
-type Props = {
-  title: string;
-  by: string;
-  description: string;
-  job?: string;
-  link: string;
-  linkLabel: string;
-  link2?: string;
-  linkLabel2?: string;
-  toColor: string;
-};
-
 const ProjectCard = ({
+  slug,
   title,
   by,
   description,
@@ -34,8 +27,9 @@ const ProjectCard = ({
   linkLabel2,
   job,
   toColor,
-}: Props) => {
+}: ProjectType) => {
   const accent = toColorToHex[toColor] ?? "#22dd55";
+  const detailHref = slug ? `/projects/${slug}` : null;
 
   return (
     <article
@@ -56,8 +50,17 @@ const ProjectCard = ({
       />
 
       <div className="relative flex min-h-0 flex-1 flex-col p-5 sm:p-6">
+        {detailHref ? (
+          <Link
+            href={detailHref}
+            aria-label={`Open ${title} project page`}
+            className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200/90 bg-white/90 text-zinc-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/45 hover:text-brand dark:border-zinc-700/90 dark:bg-zinc-900/90 dark:text-zinc-200 dark:hover:border-brand/50 dark:hover:text-brand"
+          >
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-4 w-4" />
+          </Link>
+        ) : null}
         <div className="shrink-0">
-          <h3 className="font-display text-lg font-bold leading-snug tracking-tight text-ink dark:text-white sm:text-xl">
+          <h3 className="font-display pr-14 text-lg font-bold leading-snug tracking-tight text-ink dark:text-white sm:text-xl">
             {title}
           </h3>
           <p className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-zinc-200/90 bg-zinc-50/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-zinc-500 dark:border-zinc-700/90 dark:bg-zinc-800/60 dark:text-zinc-400">

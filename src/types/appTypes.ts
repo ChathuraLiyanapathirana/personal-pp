@@ -59,6 +59,7 @@ export type SideMenuType = {
 };
 
 export type ProjectType = {
+    slug?: string;
     title: string;
     by: string;
     description: string;
@@ -68,5 +69,10 @@ export type ProjectType = {
     link2?: string;
     linkLabel2?: string;
     toColor: string;
+    bannerImages?: string[];
+    overview?: string;
+    contributions?: string[];
+    outcomes?: string[];
+    stack?: string[];
 };
 
