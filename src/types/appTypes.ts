@@ -63,6 +63,7 @@ export type ProjectType = {
     title: string;
     by: string;
     description: string;
+    detailDescription?: string;
     job?: string;
     link: string;
     linkLabel: string;

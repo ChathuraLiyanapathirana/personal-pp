@@ -18,9 +18,9 @@ import ResumeSection from "@/components/sections/ResumeSection";
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: "React Native Engineer",
+  title: "Freelance Software Engineer | React Native Consultant",
   description:
-    "Portfolio of Chathura Buddhika, a senior React Native engineer who builds high quality mobile apps and also works across React and Next.js products.",
+    "Portfolio of Chathura Buddhika, a freelance senior software engineer and reliable freelancer available for contract, part-time, full-time, remote software consulting, React Native development, and modern web product delivery.",
   alternates: {
     canonical: "/",
   },

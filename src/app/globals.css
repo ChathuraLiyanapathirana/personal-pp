@@ -226,6 +226,11 @@ li {
   color: #0a0a0a;
 }
 
+.theme-toggle-button.theme-toggle-button--fixed-left {
+  right: auto;
+  left: 15px;
+}
+
 .my-image {
   background: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 100%);
   padding: 4px;

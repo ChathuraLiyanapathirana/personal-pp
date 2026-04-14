@@ -54,7 +54,8 @@ const ProjectCard = ({
           <Link
             href={detailHref}
             aria-label={`Open ${title} project page`}
-            className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200/90 bg-white/90 text-zinc-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/45 hover:text-brand dark:border-zinc-700/90 dark:bg-zinc-900/90 dark:text-zinc-200 dark:hover:border-brand/50 dark:hover:text-brand"
+            title={`Open ${title} project page`}
+            className="absolute right-5 top-5 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200/90 bg-white/90 text-zinc-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/45 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/45 dark:border-zinc-700/90 dark:bg-zinc-900/90 dark:text-zinc-200 dark:hover:border-brand/50 dark:hover:text-brand"
           >
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-4 w-4" />
           </Link>
