@@ -20,6 +20,7 @@ const ProjectBanner = ({
   fadeDirection,
   children,
   className,
+  imageClassName,
   priority = false,
 }: {
   image: string;
@@ -27,6 +28,7 @@ const ProjectBanner = ({
   fadeDirection: "top" | "bottom";
   children?: React.ReactNode;
   className?: string;
+  imageClassName?: string;
   priority?: boolean;
 }) => {
   const overlayClass =
@@ -65,7 +67,7 @@ const ProjectBanner = ({
             alt={alt}
             fill
             sizes="(min-width: 1280px) 1152px, (min-width: 768px) calc(100vw - 4rem), calc(100vw - 2.5rem)"
-            className="scale-105 object-cover"
+            className={`scale-105 object-cover ${imageClassName ?? ""}`}
             priority={priority}
           />
           <div className={`absolute inset-0 ${overlayClass}`} />
@@ -150,7 +152,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
   const topBanner = project.bannerImages?.[0];
   const bottomBanner = project.bannerImages?.[1];
   const panelClassName =
-    "rounded-3xl bg-white/82 p-6 shadow-sm backdrop-blur-sm dark:bg-zinc-900/82 md:p-8";
+    "rounded-3xl bg-white/82 p-6 backdrop-blur-sm dark:bg-zinc-900/82 md:p-8";
 
   return (
     <main className="mx-auto max-w-6xl md:px-8">
@@ -161,7 +163,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
       <Link
         href="/#project"
-        className="theme-toggle-button theme-toggle-button--fixed-left shadow-md"
+        className="theme-toggle-button theme-toggle-button--fixed-left"
         aria-label="Back to professional contributions"
       >
         <svg
@@ -210,7 +212,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
       <section className="relative z-10 mt-8 pb-6 px-5 grid gap-6 lg:grid-cols-[1.25fr_0.75fr] md:px-0">
         <div
-          className={`${panelClassName} relative lg:after:absolute lg:after:-right-3 lg:after:bottom-6 lg:after:top-6 lg:after:w-px lg:after:bg-ink/10 lg:after:content-[''] dark:lg:after:bg-white/10`}
+          className={`${panelClassName} relative lg:after:absolute lg:after:-right-3 lg:after:bottom-6 lg:after:top-6 lg:after:max-w-xs lg:after:bg-ink/10 lg:after:content-[''] dark:lg:after:bg-white/10`}
         >
           <h2 className="font-display text-2xl font-bold text-ink dark:text-white">
             Contribution summary
@@ -290,6 +292,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           alt={`${project.title} secondary banner image`}
           fadeDirection="top"
           className="-mt-16 md:-mt-20"
+          imageClassName="scale-100 object-left-top sm:scale-105 sm:object-center"
         />
       ) : null}
     </main>
