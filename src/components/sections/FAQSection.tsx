@@ -14,7 +14,7 @@ const faqItems = [
   {
     question: "What roles are you targeting?",
     answer:
-      "I am open to React Native engineer, mobile software engineer, senior software engineer, and lead engineer opportunities, including freelance consulting and remote product work.",
+      "I am open to React Native engineer, mobile software engineer, senior software engineer, and lead engineer opportunities, including contract consulting and remote product work.",
   },
   {
     question: "What kind of teams and products do you support?",

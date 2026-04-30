@@ -14,6 +14,7 @@ const toColorToHex: Record<string, string> = {
   "to-red-600": "#dc2626",
   "to-yellow-600": "#ca8a04",
   "to-gray-300": "#d1d5db",
+  "to-fleetnurse": "#6B86C3",
 };
 
 const ProjectCard = ({

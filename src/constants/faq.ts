@@ -12,7 +12,7 @@ export const faqItems = [
   {
     question: "What roles are you targeting?",
     answer:
-      "I am open to React Native engineer, mobile software engineer, senior software engineer, and lead engineer opportunities, including freelance consulting and remote product work.",
+      "I am open to React Native engineer, mobile software engineer, senior software engineer, and lead engineer opportunities, including contract consulting and remote product work.",
   },
   {
     question: "What kind of teams and products do you support?",
@@ -23,6 +23,11 @@ export const faqItems = [
     question: "What technologies do you specialize in?",
     answer:
       "My core stack includes React Native, TypeScript, React, Next.js, Redux, Expo, Node.js, and mobile-focused tooling for performance, analytics, notifications, and CI/CD.",
+  },
+  {
+    question: "Do you use AI tools in your development workflow?",
+    answer:
+      "Yes. I use AI tools wisely to improve research, debugging, and delivery speed, but I do not hand over engineering responsibility to them. I rely on my own technical judgment to validate outputs, make decisions, and use AI efficiently without wasting unnecessary tokens.",
   },
   {
     question: "Do you work with both iOS and Android releases?",
@@ -40,13 +45,13 @@ export const faqItems = [
       "Yes. I am based in Sri Lanka and enjoy working remotely with distributed teams, clients, and product companies across different regions and time zones.",
   },
   {
-    question: "Do you take freelance or consulting work?",
+    question: "Do you take contract or consulting work?",
     answer:
-      "Yes. I am available for freelance consulting, contract based React Native work, architecture guidance, and senior engineering support for mobile or full stack products.",
+      "Yes. I am available for contract-based React Native work, software consulting, architecture guidance, and senior engineering support for mobile or full stack products.",
   },
   {
     question: "Why would a company hire you?",
     answer:
-      "Companies usually hire me when they need a senior engineer who can own delivery, improve code quality, solve difficult mobile issues, and help teams ship reliable products faster.",
+      "Companies usually hire me when they need a senior engineer who can own delivery, give realistic time estimates, communicate clearly, solve difficult mobile issues, and ship reliable products on time without excuses or timeline drift.",
   },
 ] as const;

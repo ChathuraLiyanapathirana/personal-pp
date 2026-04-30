@@ -14,7 +14,7 @@ export const contactInfo = {
     bDay: 'February 07',
     nationality: 'Sri Lankan',
     languages: 'English and Sinhala',
-    freelance: 'Available',
+    availability: 'Available',
     mobile: '+94 789307370',
     address: 'Kalutara,\nWestern Province,\nSri Lanka',
     email: 'lpchathurabuddhika@gmail.com',
@@ -29,11 +29,11 @@ export const contactInfo = {
 export const experienceSummary: ExperienceType[] = [
     {
         nested: true,
-        company: 'Freelance Software Development Consulting',
+        company: 'Contract Software Development Consulting',
         domain: 'Software Development Consulting',
         designation: 'Software Development Consultant',
         duration: 'Present',
-        product: 'Contract-based freelance projects',
+        product: 'Contract based software projects',
         description: `<strong>Responsibilities:</strong>
         Providing comprehensive software development consulting services on a contract basis. 
         Specializing in full-stack development, mobile application development, and technical 
@@ -378,6 +378,29 @@ export const professionalProjects: ProjectType[] = [
             "Supported a stronger technical foundation for continued feature growth on the platform.",
         ],
         stack: ["React", "InversifyJS", "AWS CloudWatch", "Rundeck", "RabbitMQ", "Full Stack Development", "Ad Tech"],
+    },
+    {
+        slug: "fleetnurse",
+        title: "FleetNurse",
+        by: "FleetNurse",
+        description: "Healthcare staffing mobile platform where I worked on the existing iOS and Android apps and contributed to the React Native revamped project.",
+        detailDescription: "At FleetNurse, I worked on their existing iOS and Android applications while also contributing to the React Native revamped project. The work focused on supporting a healthcare staffing product used by clinicians and facilities to manage shift opportunities, availability, and mobile first operational workflows.",
+        job: "iOS and Android application development and React Native revamp",
+        link: "https://www.fleetnurse.com/",
+        linkLabel: "Website",
+        toColor: "to-fleetnurse",
+        overview: "FleetNurse is a healthcare staffing platform that helps connect healthcare professionals with facilities through mobile and web workflows. My contribution covered existing native mobile application work and the React Native revamp effort.",
+        contributions: [
+            "Worked on the existing iOS and Android applications supporting healthcare staffing workflows.",
+            "Contributed to the React Native revamped project to improve the mobile application foundation.",
+            "Supported mobile first product delivery for clinicians and facilities managing shift opportunities and operational workflows.",
+        ],
+        outcomes: [
+            "Helped maintain continuity across existing mobile applications while the revamped project progressed.",
+            "Supported a stronger cross platform mobile foundation through React Native development.",
+            "Contributed to a product experience focused on reliable healthcare staffing operations.",
+        ],
+        stack: ["React Native", "iOS", "Android", "Mobile App Development", "Healthcare Staffing", "Cross platform Apps"],
     },
     {
         slug: "sripay",
