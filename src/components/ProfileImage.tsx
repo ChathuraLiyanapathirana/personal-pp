@@ -37,13 +37,6 @@ const ProfileImage = () => {
           </div>
         </div>
 
-        {/* Online status indicator */}
-        <div className="absolute -bottom-1 -right-1 z-10 flex items-center justify-center">
-          <div className="relative flex h-5 w-5 items-center justify-center rounded-full bg-background p-0.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-40" />
-            <span className="relative inline-flex h-3.5 w-3.5 rounded-full bg-brand shadow-[0_0_8px_rgba(34,221,85,0.6)]" />
-          </div>
-        </div>
       </div>
     </div>
   );

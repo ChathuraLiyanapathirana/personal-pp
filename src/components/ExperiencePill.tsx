@@ -48,7 +48,6 @@ const ExperiencePill = ({
     >
       <div className="absolute left-[0.75rem] top-8 z-[2] md:left-4" aria-hidden>
         <span className="relative flex h-3 w-3">
-          <span className="absolute inline-flex h-full w-full animate-experience-pulse-ring rounded-full bg-brand/40 opacity-75" />
           <span className="relative inline-flex h-3 w-3 rounded-full border-2 border-white bg-brand shadow-[0_0_12px_rgba(34,221,85,0.65)] dark:border-ink" />
         </span>
       </div>

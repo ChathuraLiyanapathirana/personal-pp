@@ -3,19 +3,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { ProjectType } from "@/types/appTypes";
-
-const toColorToHex: Record<string, string> = {
-  "to-lime-600": "#65a30d",
-  "to-red-500": "#ef4444",
-  "to-blue-600": "#2563eb",
-  "to-sky-600": "#0284c7",
-  "to-purple-600": "#9333ea",
-  "to-green-600": "#16a34a",
-  "to-red-600": "#dc2626",
-  "to-yellow-600": "#ca8a04",
-  "to-gray-300": "#d1d5db",
-  "to-fleetnurse": "#6B86C3",
-};
+import { getProjectAccent } from "@/lib/projectAccent";
 
 const ProjectCard = ({
   slug,
@@ -29,7 +17,7 @@ const ProjectCard = ({
   job,
   toColor,
 }: ProjectType) => {
-  const accent = toColorToHex[toColor] ?? "#22dd55";
+  const accent = getProjectAccent(toColor);
   const detailHref = slug ? `/projects/${slug}` : null;
 
   return (

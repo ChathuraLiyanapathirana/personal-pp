@@ -56,14 +56,9 @@ const config: Config = {
           "0%": { backgroundPosition: "200% 0" },
           "100%": { backgroundPosition: "-200% 0" },
         },
-        "experience-pulse-ring": {
-          "0%, 100%": { opacity: "0.45", transform: "scale(1)" },
-          "50%": { opacity: "1", transform: "scale(1.08)" },
-        },
       },
       animation: {
         "experience-shimmer": "experience-shimmer 4s linear infinite",
-        "experience-pulse-ring": "experience-pulse-ring 2.8s ease-in-out infinite",
       },
     },
   },

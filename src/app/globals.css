@@ -34,6 +34,11 @@
   }
 }
 
+html,
+.portfolio-body {
+  overflow-x: clip;
+}
+
 .portfolio-body {
   min-height: 100vh;
 }
