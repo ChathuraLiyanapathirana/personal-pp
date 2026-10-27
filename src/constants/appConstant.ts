@@ -23,6 +23,7 @@ export const contactInfo = {
     facebook: 'https://www.facebook.com/chathurabuddhikalp/',
     instagram: 'https://www.instagram.com/chathurabuddhikalp/',
     blog: 'https://appcitor.com',
+    pocketa: 'https://pocketa.appcitor.com',
     git: 'https://github.com/ChathuraLiyanapathirana',
 }
 
@@ -429,6 +430,32 @@ export const professionalProjects: ProjectType[] = [
 ];
 
 export const personalProjects: ProjectType[] = [
+    {
+        slug: "pocketa",
+        title: "Pocketa",
+        by: "Appcitor",
+        description: "Private, offline expense tracker and budgeting app for iPhone and Android. No account, no bank login, encrypted on the device.",
+        detailDescription: "Pocketa is a personal finance app I designed and built end to end with React Native and Expo. It is a fully offline expense tracker and budgeting app: budgets (zero-based, envelope, 50/30/20 and category limits), recurring bills, savings goals, debt payoff planning, loans, bill splitting, trips, and multi-currency accounts with net worth, all stored in an encrypted SQLite database on the phone. On-device receipt scanning uses Apple Vision on iOS and ML Kit on Android, and natural language entry parses phrases like “coffee 4.50 yesterday”. It ships with 19 iOS and 18 Android home screen widgets, 21 languages including right-to-left Arabic, and an ad-free one-time purchase through in-app billing.",
+        job: "React Native (Expo) product design, architecture and development",
+        link: contactInfo.pocketa,
+        linkLabel: "Pocketa website",
+        link2: contactInfo.blog,
+        linkLabel2: "Appcitor",
+        toColor: "to-pocketa",
+        bannerImages: ["/images/pocketa banner.png"],
+        overview: "Pocketa is a privacy-first expense tracker and budget app published under my Appcitor brand. There is no server holding the ledger, so every feature, including receipt scanning, forecasts and search, runs on the phone and works in airplane mode.",
+        contributions: [
+            "Designed the product, the design system and the clean architecture, then built the whole app solo with React Native, Expo, TypeScript and Zustand.",
+            "Implemented an encrypted SQLite ledger in minor units with multi-currency conversion, budgets, bills, goals, debts, loans, split bills and encrypted backup and restore, including Google Drive backup on Android.",
+            "Built native modules for on-device OCR receipt scanning (Vision on iOS, ML Kit on Android), screen privacy, iOS WidgetKit and Android home screen widgets, and shipped the ad-free in-app purchase.",
+        ],
+        outcomes: [
+            "A complete personal finance app that needs no sign-up, no bank linking and no network connection.",
+            "Localised into 21 languages with full right-to-left support, plus 37 OS widgets across iOS and Android.",
+            "Monetised with ads and a single ad-free purchase, with no subscription and no user data leaving the device.",
+        ],
+        stack: ["React Native", "Expo", "TypeScript", "Zustand", "Encrypted SQLite", "Native Modules", "On-device OCR", "iOS Widgets", "Android Widgets", "In-app Purchases", "i18n", "Offline-first"],
+    },
     {
         title: "Stitchnp",
         by: "lpcb",

@@ -38,7 +38,8 @@ const ContactDetails = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="flex h-12 w-12 items-center justify-center rounded-xl border border-ink/10 bg-zinc-50 text-ink transition hover:border-brand/40 hover:bg-brand-surface hover:text-brand dark:border-white/10 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:border-brand/50 dark:hover:bg-brand/10 dark:hover:text-brand"
-          aria-label="Blog"
+          aria-label="Appcitor software engineering blog"
+          title="Appcitor software engineering blog"
         >
           <FontAwesomeIcon icon={faBloggerB} className="h-6 w-6" />
         </a>

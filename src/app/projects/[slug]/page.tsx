@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { professionalProjects } from "@/constants/appConstant";
+import { professionalProjects, personalProjects } from "@/constants/appConstant";
 import ProjectHeroBackdrop from "@/components/ProjectHeroBackdrop";
 import { siteConfig } from "@/lib/seo";
 
@@ -11,8 +11,10 @@ type ProjectPageProps = {
   };
 };
 
+const allProjects = [...professionalProjects, ...personalProjects];
+
 const getProject = (slug: string) =>
-  professionalProjects.find((project) => project.slug === slug);
+  allProjects.find((project) => project.slug === slug);
 
 const EditorialSection = ({
   index,
@@ -70,7 +72,7 @@ const EditorialLink = ({
 );
 
 export function generateStaticParams() {
-  return professionalProjects
+  return allProjects
     .filter((project) => project.slug)
     .map((project) => ({ slug: project.slug as string }));
 }

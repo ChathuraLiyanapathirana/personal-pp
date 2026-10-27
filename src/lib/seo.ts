@@ -40,6 +40,10 @@ export const siteConfig = {
     "hire freelance developer",
     "hire reliable freelancer",
     "hire software consultant",
+    "hire mobile app developer",
+    "hire React Native developer",
+    "freelance mobile app developer",
+    "software engineer portfolio",
     "React Native engineer",
     "React Native developer",
     "freelance React Native developer",
@@ -62,6 +66,9 @@ export const siteConfig = {
     "responsible AI tool usage",
     "reliable software delivery",
     "software project time estimation",
+    "Pocketa expense tracker app",
+    "offline budgeting app developer",
+    "Appcitor",
   ],
   sameAs: [
     contactInfo.linkedin,
@@ -119,6 +126,24 @@ export const personJsonLd = {
     },
   ],
   sameAs: siteConfig.sameAs,
+  owns: [
+    {
+      "@type": "MobileApplication",
+      name: "Pocketa",
+      url: contactInfo.pocketa,
+      applicationCategory: "FinanceApplication",
+      operatingSystem: "iOS, Android",
+      description:
+        "Private, offline expense tracker and budgeting app for iPhone and Android.",
+    },
+    {
+      "@type": "WebSite",
+      name: "Appcitor",
+      url: contactInfo.blog,
+      description:
+        "Software engineering blog with React, React Native and Java tutorials.",
+    },
+  ],
   knowsAbout: [
     "React Native",
     "Mobile app development",

@@ -9,6 +9,7 @@ const toColorToHex: Record<string, string> = {
   "to-yellow-600": "#ca8a04",
   "to-gray-300": "#d1d5db",
   "to-fleetnurse": "#6B86C3",
+  "to-pocketa": "#3E6600",
 };
 
 export const getProjectAccent = (toColor: string) =>
