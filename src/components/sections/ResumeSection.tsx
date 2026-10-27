@@ -1,8 +1,48 @@
 import React from "react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import SectionHeading from "../SectionHeading";
 import { faqItems } from "@/constants/faq";
+
+const topicPages = [
+  {
+    href: "/react-native-engineer",
+    title: "React Native Engineer",
+    description:
+      "React Native delivery, architecture, native integrations, and mobile product ownership.",
+  },
+  {
+    href: "/mobile-software-engineer",
+    title: "Mobile Software Engineer",
+    description:
+      "Mobile engineering across iOS, Android, performance, releases, and scalable delivery.",
+  },
+  {
+    href: "/senior-software-engineer",
+    title: "Senior Software Engineer",
+    description:
+      "Technical leadership, full-stack delivery, and product engineering experience.",
+  },
+  {
+    href: "/full-stack-developer",
+    title: "Full Stack Developer",
+    description:
+      "React, Next.js, Node.js, and TypeScript product work, end to end.",
+  },
+  {
+    href: "/mobile-app-development-services",
+    title: "Mobile App Development Services",
+    description:
+      "End-to-end app development for iOS and Android, from idea and MVP to store release.",
+  },
+  {
+    href: "/software-consultant",
+    title: "Software Consultant",
+    description:
+      "Architecture reviews, technical audits, delivery rescue, and honest planning.",
+  },
+];
 
 const ResumeSection = () => {
   return (
@@ -13,7 +53,7 @@ const ResumeSection = () => {
       <div className="relative mx-auto max-w-5xl px-5 md:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Full background"
-          title="Resume"
+          title="Resume & Info"
           description="Interested in working together? My resume covers the full picture: roles, technical scope, and qualifications, all in one place."
         />
 
@@ -61,6 +101,36 @@ const ResumeSection = () => {
                   {item.answer}
                 </p>
               </details>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <div className="mb-5">
+            <h3 className="font-display text-2xl font-bold text-ink dark:text-white">
+              What I Do
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              Dedicated pages covering each role and service in more depth.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {topicPages.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-2xl border border-ink/10 bg-white/90 p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand/30 dark:border-white/10 dark:bg-zinc-900/90"
+              >
+                <h4 className="font-display text-lg font-bold text-ink dark:text-white">
+                  {item.title}
+                </h4>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+                  {item.description}
+                </p>
+                <span className="mt-4 inline-flex text-sm font-semibold text-brand">
+                  Read more
+                </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -31,7 +31,7 @@ const HelloSection = () => {
 
             {/* Main heading */}
             <h1 className="font-display mt-8 mb-2 md:text-left text-4xl font-bold tracking-tight text-ink dark:text-zinc-50 sm:text-5xl md:text-6xl">
-              React Native Engineer{" "}
+              Full Stack &amp; React Native Engineer{" "}
               <span className="bg-gradient-to-r from-brand to-brand-dim bg-clip-text text-transparent">
                 Chathura Buddhika
               </span>
@@ -39,7 +39,7 @@ const HelloSection = () => {
 
             {/* Subtitle */}
             <p className="mt-0 text-xl font-medium text-ink/80 dark:text-zinc-300 sm:text-2xl">
-              Senior Software Engineer building mobile apps and modern web products
+              Senior Software Engineer with 10+ years building mobile apps and modern web products
             </p>
 
             {/* Description */}
@@ -70,7 +70,7 @@ const HelloSection = () => {
             {/* Quick stats */}
             <div className="mt-8 flex items-center justify-center gap-4 sm:gap-6 lg:justify-start">
               <div className="text-center">
-                <div className="text-xl font-bold text-ink dark:text-zinc-100 sm:text-2xl">8+</div>
+                <div className="text-xl font-bold text-ink dark:text-zinc-100 sm:text-2xl">10+</div>
                 <div className="text-[10px] text-zinc-500 dark:text-zinc-400 sm:text-xs">Years Experience</div>
               </div>
               <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-700 sm:h-8" />

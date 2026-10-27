@@ -8,6 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/react-native-engineer",
     "/mobile-software-engineer",
     "/senior-software-engineer",
+    "/full-stack-developer",
+    "/mobile-app-development-services",
+    "/software-consultant",
     ...[...professionalProjects, ...personalProjects]
       .filter((project) => project.slug)
       .map((project) => `/projects/${project.slug}`),

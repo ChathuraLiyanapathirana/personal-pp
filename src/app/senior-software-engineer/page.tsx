@@ -4,7 +4,7 @@ import { personJsonLd, siteConfig } from "@/lib/seo";
 
 const pageTitle = "Senior Software Engineer";
 const pageDescription =
-  "Senior software engineer portfolio for Chathura Buddhika, covering React Native, Next.js, full-stack product delivery, architecture, mentoring, and high-impact engineering work.";
+  "Senior software engineer with 10+ years of experience in React Native, Next.js, full-stack product delivery, architecture, and technical leadership.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -58,13 +58,56 @@ export default function SeniorSoftwareEngineerPage() {
 
       <section className="mt-8 rounded-2xl border border-ink/10 bg-white/90 p-8 shadow-sm dark:border-white/10 dark:bg-zinc-900/90">
         <h2 className="font-display text-2xl font-bold text-ink dark:text-white">
-          Search intent fit
+          A decade of shipping products
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 md:text-base">
-          This page is intended for teams searching for a talented software engineer,
-          senior software engineer, or product focused engineer who can move between
-          mobile, web, and technical execution with minimal ramp up time.
+          Around 10 years of professional experience have taken me through
+          fintech payment platforms, insurance products serving multiple
+          markets, large e-commerce apps, healthcare staffing systems, and
+          social products — sometimes as the lead developer, sometimes as the
+          senior engineer brought in to stabilize delivery. That range is the
+          point: a senior engineer earns the title by having seen enough
+          systems succeed and fail to know which decisions matter early and
+          which can safely wait.
         </p>
+        <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 md:text-base">
+          I move comfortably between mobile and web: React Native on one day,
+          a Next.js dashboard or Node.js API the next. Teams that hire me get
+          an engineer who can pick up whichever layer of the product is
+          blocking progress, with minimal ramp-up time.
+        </p>
+      </section>
+
+      <section className="mt-8 rounded-2xl border border-ink/10 bg-white/90 p-8 shadow-sm dark:border-white/10 dark:bg-zinc-900/90">
+        <h2 className="font-display text-2xl font-bold text-ink dark:text-white">
+          What senior means to me
+        </h2>
+        <ul className="mt-5 space-y-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 md:text-base">
+          <li>
+            Estimates you can plan around, risks raised before they become
+            schedule slips, and no surprises at demo time.
+          </li>
+          <li>
+            Code that the next engineer can maintain, with reviews and
+            standards that lift the team rather than gatekeep it.
+          </li>
+          <li>
+            Judgment about trade-offs: knowing when the quick fix is right,
+            when it is debt, and saying which one you are getting.
+          </li>
+          <li>
+            Full accountability for outcomes — if I take the work, the work
+            ships. See my{" "}
+            <Link href="/#experience" className="font-semibold text-brand">
+              experience timeline
+            </Link>{" "}
+            and{" "}
+            <Link href="/#projects" className="font-semibold text-brand">
+              project case studies
+            </Link>{" "}
+            for the record.
+          </li>
+        </ul>
       </section>
 
       <div className="mt-10 flex flex-wrap gap-4">
@@ -73,6 +116,9 @@ export default function SeniorSoftwareEngineerPage() {
         </Link>
         <Link href="/react-native-engineer" className="text-sm font-semibold text-brand">
           React Native engineer page
+        </Link>
+        <Link href="/full-stack-developer" className="text-sm font-semibold text-brand">
+          Full stack developer page
         </Link>
       </div>
     </main>

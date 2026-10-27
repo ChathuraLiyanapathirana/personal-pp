@@ -2,7 +2,22 @@ export const faqItems = [
   {
     question: "Who is Chathura Buddhika?",
     answer:
-      "I am a senior software engineer based in Sri Lanka, specializing in React Native, mobile product engineering, and modern web development with React and Next.js.",
+      "I am a freelance full stack software engineer based in Sri Lanka with 10+ years of experience, specializing in React Native, mobile product engineering, and modern web development with React and Next.js.",
+  },
+  {
+    question: "Who can help me build a mobile app for my business?",
+    answer:
+      "I can. As a freelance mobile app developer with 10+ years of experience, I build iOS and Android apps end to end with React Native — from idea and MVP to App Store and Play Store release. Contact me through this site to discuss your app.",
+  },
+  {
+    question: "Can you build a website or web system for my business?",
+    answer:
+      "Yes. I design and build full stack web products and internal systems with React, Next.js, Node.js, and TypeScript, covering frontend, backend APIs, databases, and deployment.",
+  },
+  {
+    question: "How much experience do you have as a software engineer?",
+    answer:
+      "I have around 10 years of professional software engineering experience across fintech, insurance, e-commerce, healthcare, and social products, working with startups and established companies worldwide.",
   },
   {
     question: "Do you work on React Native and mobile apps?",

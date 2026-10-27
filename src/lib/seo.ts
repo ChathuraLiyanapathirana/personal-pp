@@ -1,7 +1,7 @@
 import { contactInfo } from "@/constants/appConstant";
 import { faqItems } from "@/constants/faq";
 
-const defaultSiteUrl = "http://localhost:3000";
+const defaultSiteUrl = "https://www.lpcb.work";
 
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") || defaultSiteUrl;
@@ -9,9 +9,9 @@ export const siteUrl =
 export const siteConfig = {
   name: "Chathura Buddhika Portfolio",
   shortName: "LPCB Portfolio",
-  title: "Freelance React Native Engineer | Chathura Buddhika",
+  title: "Freelance Full Stack & React Native Engineer | Chathura Buddhika",
   description:
-    "Chathura Buddhika is a freelance senior software engineer and software consultant specializing in React Native, mobile apps, React, and Next.js, available for contract, part-time, full-time, and remote product work.",
+    "Freelance full stack software engineer with 10+ years of experience. Mobile app development services, React Native, React, and Next.js. Hire for remote work.",
   location: "Sri Lanka",
   siteUrl,
   keywords: [
@@ -62,6 +62,22 @@ export const siteConfig = {
     "Next.js developer",
     "freelance Next.js developer",
     "TypeScript engineer",
+    "full stack developer",
+    "freelance full stack developer",
+    "full stack developer for hire",
+    "hire full stack developer",
+    "full stack engineer",
+    "mobile app development services",
+    "app development services",
+    "custom software development",
+    "web development services",
+    "app developer for hire",
+    "software developer for hire",
+    "build an app for my business",
+    "mvp development for startups",
+    "startup app developer",
+    "hire Next.js developer",
+    "10 years experience software engineer",
     "AI-assisted software development",
     "responsible AI tool usage",
     "reliable software delivery",
@@ -86,7 +102,11 @@ export const personJsonLd = {
   alternateName: "Chathura Buddhika",
   givenName: "Chathura",
   familyName: "Liyana Pathiranage",
-  jobTitle: "Senior Software Engineer",
+  jobTitle: [
+    "Senior Software Engineer",
+    "Full Stack Developer",
+    "React Native Engineer",
+  ],
   description: siteConfig.description,
   url: siteConfig.siteUrl,
   image: `${siteConfig.siteUrl}/twitter-image`,
@@ -123,6 +143,46 @@ export const personJsonLd = {
       "@type": "Occupation",
       name: "Senior Software Engineer",
       skills: "React, Next.js, full-stack product delivery, architecture, debugging, technical leadership",
+    },
+    {
+      "@type": "Occupation",
+      name: "Full Stack Developer",
+      skills: "React, Next.js, Node.js, TypeScript, REST APIs, databases, end-to-end web and mobile product delivery",
+    },
+  ],
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Mobile App Development Services",
+        description:
+          "End-to-end React Native mobile app development for iOS and Android, from idea and MVP to App Store and Play Store release.",
+        url: `${siteUrl}/mobile-app-development-services`,
+        serviceType: "Mobile app development",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Full Stack Web Development",
+        description:
+          "Full stack web product development with React, Next.js, Node.js, and TypeScript for startups and product teams.",
+        url: `${siteUrl}/full-stack-developer`,
+        serviceType: "Web development",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Software Consulting",
+        description:
+          "Software consulting, architecture reviews, technical audits, and delivery planning for mobile and web products.",
+        url: `${siteUrl}/software-consultant`,
+        serviceType: "Software consulting",
+      },
     },
   ],
   sameAs: siteConfig.sameAs,

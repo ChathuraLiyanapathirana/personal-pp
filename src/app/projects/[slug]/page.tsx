@@ -85,10 +85,14 @@ export function generateMetadata({ params }: ProjectPageProps): Metadata {
   }
 
   const projectDescription = project.detailDescription ?? project.description;
+  const metaDescription = `${project.title} project contribution by Chathura Buddhika. ${projectDescription}`;
 
   return {
     title: `${project.title} Project`,
-    description: `${project.title} project contribution by Chathura Buddhika. ${projectDescription}`,
+    description:
+      metaDescription.length > 160
+        ? `${metaDescription.slice(0, 157).trimEnd()}...`
+        : metaDescription,
     alternates: {
       canonical: `/projects/${project.slug}`,
     },

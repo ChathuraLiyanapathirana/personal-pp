@@ -4,7 +4,7 @@ import { personJsonLd, siteConfig } from "@/lib/seo";
 
 const pageTitle = "Mobile Software Engineer";
 const pageDescription =
-  "Mobile software engineer portfolio for Chathura Buddhika, focused on React Native, iOS, Android, mobile architecture, performance optimization, and product delivery.";
+  "Mobile software engineer focused on React Native, iOS, Android, mobile architecture, performance optimization, and reliable product delivery.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -65,6 +65,42 @@ export default function MobileSoftwareEngineerPage() {
           planning, implementation, performance, release management, and product
           delivery, this site reflects the scope of work I usually take on.
         </p>
+        <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 md:text-base">
+          Over roughly 10 years I have worked on mobile products in fintech,
+          insurance, e-commerce, healthcare staffing, and social networking —
+          as a lead developer on some, as the engineer who stabilized or
+          upgraded others. I have taken apps through full React Native version
+          upgrades, rebuilt legacy codebases without pausing releases, and
+          supported store submissions, compliance updates, and production
+          incident debugging on both platforms.
+        </p>
+      </section>
+
+      <section className="mt-8 rounded-2xl border border-ink/10 bg-white/90 p-8 shadow-sm dark:border-white/10 dark:bg-zinc-900/90">
+        <h2 className="font-display text-2xl font-bold text-ink dark:text-white">
+          Beyond the code
+        </h2>
+        <ul className="mt-5 space-y-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 md:text-base">
+          <li>
+            Realistic estimates: I commit to timelines I can defend and flag
+            risks early instead of explaining them late.
+          </li>
+          <li>
+            Clear communication with distributed teams across time zones, in
+            writing that product managers and founders can act on.
+          </li>
+          <li>
+            Mentoring and code review that raise the whole team&rsquo;s mobile
+            engineering standard, not just my own output.
+          </li>
+          <li>
+            Ownership from kickoff to store release — see{" "}
+            <Link href="/mobile-app-development-services" className="font-semibold text-brand">
+              mobile app development services
+            </Link>{" "}
+            for how a full engagement is structured.
+          </li>
+        </ul>
       </section>
 
       <div className="mt-10 flex flex-wrap gap-4">
@@ -73,6 +109,9 @@ export default function MobileSoftwareEngineerPage() {
         </Link>
         <Link href="/senior-software-engineer" className="text-sm font-semibold text-brand">
           Senior software engineer page
+        </Link>
+        <Link href="/react-native-engineer" className="text-sm font-semibold text-brand">
+          React Native engineer page
         </Link>
       </div>
     </main>
