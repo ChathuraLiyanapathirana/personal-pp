@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   creator: "Chathura Buddhika",
   publisher: "Chathura Buddhika",
   category: "technology",
+  verification: {
+    google: "nScVXag0464-5OpDosrqv1BcykO2owbBIgcoNlRSMDY",
+  },
   alternates: {
     canonical: "/",
   },
