@@ -116,13 +116,14 @@ const ResumeSection = () => {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {topicPages.map((item) => (
-              <Link
+              <div
                 key={item.href}
-                href={item.href}
-                className="rounded-2xl border border-ink/10 bg-white/90 p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand/30 dark:border-white/10 dark:bg-zinc-900/90"
+                className="relative rounded-2xl border border-ink/10 bg-white/90 p-5 shadow-sm transition hover:-translate-y-1 hover:border-brand/30 dark:border-white/10 dark:bg-zinc-900/90"
               >
                 <h4 className="font-display text-lg font-bold text-ink dark:text-white">
-                  {item.title}
+                  <Link href={item.href} className="after:absolute after:inset-0">
+                    {item.title}
+                  </Link>
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
                   {item.description}
@@ -130,7 +131,7 @@ const ResumeSection = () => {
                 <span className="mt-4 inline-flex text-sm font-semibold text-brand">
                   Read more
                 </span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

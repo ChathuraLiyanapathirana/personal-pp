@@ -140,9 +140,9 @@ const ExperiencePill = ({
                 />
                 <div className="pl-3">
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-                    <h4 className="text-lg font-bold leading-tight text-ink transition-colors group-hover/nested:text-brand-dim dark:text-white dark:group-hover/nested:text-brand">
+                    <p className="text-lg font-bold leading-tight text-ink transition-colors group-hover/nested:text-brand-dim dark:text-white dark:group-hover/nested:text-brand">
                       {item.company}
-                    </h4>
+                    </p>
                     <time className="shrink-0 self-start rounded-full border border-brand/30 bg-brand-surface px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-brand-dim dark:border-brand/40 dark:bg-brand/10 dark:text-brand">
                       {item.duration}
                     </time>
@@ -152,15 +152,15 @@ const ExperiencePill = ({
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2 text-xs">
                     <span className="rounded-md bg-zinc-100/80 px-2 py-1 text-zinc-600 dark:bg-white/5 dark:text-zinc-400">
-                      <strong className="font-semibold text-zinc-500 dark:text-zinc-500">
+                      <span className="font-semibold text-zinc-500 dark:text-zinc-500">
                         Domain:
-                      </strong>{" "}
+                      </span>{" "}
                       {item.domain}
                     </span>
                     <span className="rounded-md bg-zinc-100/80 px-2 py-1 text-zinc-600 dark:bg-white/5 dark:text-zinc-400">
-                      <strong className="font-semibold text-zinc-500 dark:text-zinc-500">
+                      <span className="font-semibold text-zinc-500 dark:text-zinc-500">
                         Focus:
-                      </strong>{" "}
+                      </span>{" "}
                       {item.product}
                     </span>
                   </div>

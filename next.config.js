@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       {
         protocol: 'https', // Required: Specify the protocol (http or https)
-        hostname: 'appcitor.com', // Required: Specify the allowed hostname
+        hostname: '**.appcitor.com', // CMS media lives on appci-cms.appcitor.com
       },
     ]
   },
